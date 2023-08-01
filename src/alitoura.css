@@ -13,20 +13,16 @@ body {
     overscroll-behavior: none;
 }
 
-.pageContent{
-    
-}
-
 .bodyDarkMode {
     background-color: #0D0D0E;
     color: #F1F1EF;
 }
 
-.navMenu {
-    margin: 15px;
+.headerContainer {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
+    margin: 5px;
 }
 
 .header {
@@ -51,27 +47,38 @@ body {
     width: 0%;
     height: 2px;
     background-color: #0D0D0E;
-    transition: width 0.2s ease-in-out;
     position: absolute;
+    
+    transition: width 0.2s ease-in-out;
     bottom: -3px;
     left: 0;
-    /* margin-bottom: -3px; */
 }
 
 .header a:hover::before {
     width: 100%;
 }
 
-.headerFlex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 5px;
+.headerDarkMode a::before {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: #F1F1EF;
+    transition: width 0.2s ease-in-out;
+    position: absolute;
+    bottom: -3px;
+    left: 0px;
 }
 
-.menuDarkMode a::before {
-    height: 1.5px;
-    background-color: #F1F1EF;
+.headerDarkMode a:hover::before {
+    width: 100%;
+}
+
+.navMenu {
+    margin: 15px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .toggleButton {
@@ -100,12 +107,21 @@ body {
     height: fit-content;
 }
 
-.box {
+.logoMask {
     position: absolute;
     background-color: #F1F1EF;
     height: 100%;
     width: 100%;
-    animation: fadeInFromTop 2.5s forwards;
+    animation: fadeInFromTop 1.2s forwards;
+    z-index: 0;
+}
+
+.logoMaskDarkMode {
+    position: absolute;
+    background-color: #0D0D0E;
+    height: 100%;
+    width: 100%;
+    animation: fadeInFromTop 1.2s forwards;
 }
 
 @keyframes fadeInFromTop {
@@ -121,4 +137,24 @@ body {
 
 .logoDarkMode {
     display: none;
+}
+
+.carouselContainer {
+    position: fixed;
+    display: block;
+    border: #0D0D0E;
+    border-style: dashed;
+    min-height: 80vh;
+    z-index: -4;
+    padding: 50px;
+    margin: 10px;
+    overflow-y: scroll;
+}
+
+#pic1 {
+    width: 50%;
+    height: 50%;
+    z-index: -3;
+    opacity: 0;
+
 }
