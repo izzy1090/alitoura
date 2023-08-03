@@ -1,10 +1,11 @@
 <html>
   <head>
     <link rel="stylesheet" href="alitoura.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     <script src="anime.min.js"></script>
+    <script src="locomotive-scroll.min.js"></script>
   </head>
   <body>
     <div class="pageContent">
@@ -30,82 +31,77 @@
             <div class="carouselContainer">
                 <img src="../src/pics/1.jpg" class="pictures pic1">
                 <img src="../src/pics/2.jpg" class="pictures pic2">
-                <img src="../src/pics/3.jpg" class="pictures pic3">
-                <img src="../src/pics/4.jpg" class="pictures pic4">
-                <img src="../src/pics/5.jpg" class="pictures pic5">
-                <img src="../src/pics/6.jpg" class="pictures pic6">
-                <img src="../src/pics/7.jpg" class="pictures pic7">
-                <img src="../src/pics/8.jpg" class="pictures pic8">
-                <img src="../src/pics/9.jpg" class="pictures pic9">
-                <img src="../src/pics/10.jpg" class="pictures pic10">
-                <img src="../src/pics/11.jpg" class="pictures pic11">
+                <img src="../src/pics/3.jpg" class="pictures pic3" loading="lazy">
+                <img src="../src/pics/4.jpg" class="pictures pic4" loading="lazy">
+                <img src="../src/pics/5.jpg" class="pictures pic5" loading="lazy">
+                <img src="../src/pics/6.jpg" class="pictures pic6" loading="lazy">
+                <img src="../src/pics/7.jpg" class="pictures pic7" loading="lazy">
+                <img src="../src/pics/8.jpg" class="pictures pic8" loading="lazy">
+                <img src="../src/pics/9.jpg" class="pictures pic9" loading="lazy">
+                <img src="../src/pics/10.jpg" class="pictures pic10" loading="lazy">
+                <img src="../src/pics/11.jpg" class="pictures pic11" loading="lazy">
 
             </div>
         
     </div>
   </body>
     <script>
-        function toggleLightDark() {
-            var el1 = document.body;
-            el1.classList.toggle("bodyDarkMode");
-            var el2 = document.getElementsByClassName('toggleButton')[0];
-            el2.classList.toggle("buttonDarkMode");
-            var el3 = document.getElementsByClassName('logo')[0]; //light mode
-            el3.classList.toggle("logoDarkMode");
-            var el4 = document.getElementsByClassName('logo')[1]; //dark mode
-            el4.classList.toggle("logoDarkMode");
-            var el5 = document.getElementsByClassName('navMenu')[0];
-            el5.classList.toggle("headerDarkMode");
-            var el6 = document.getElementsByClassName('logoMask')[0];
-            el6.classList.toggle('logoMaskDarkMode')
-        }
 
-        function fadePicsAndGrowLog(){
-            anime({
-                targets: '.pictures', 
-                opacity: 1,
-                duration: 800,
-                easing: 'easeInOutQuad'
-            }),
-            anime({
-                targets: '.logo',
-                scale: 1.08,
-                duration: 900,
-                easing: 'easeInOutQuad'
-            })
-        }
-        
-        var tl = anime.timeline({
-        easing: 'easeOutExpo',
-        duration: 500
-        });
+      function toggleLightDark() {
+          var el1 = document.body;
+          el1.classList.toggle("bodyDarkMode");
+          var el2 = document.getElementsByClassName('toggleButton')[0];
+          el2.classList.toggle("buttonDarkMode");
+          var el3 = document.getElementsByClassName('logo')[0]; //light mode
+          el3.classList.toggle("logoDarkMode");
+          var el4 = document.getElementsByClassName('logo')[1]; //dark mode
+          el4.classList.toggle("logoDarkMode");
+          var el5 = document.getElementsByClassName('navMenu')[0];
+          el5.classList.toggle("headerDarkMode");
+          var el6 = document.getElementsByClassName('logoMask')[0];
+          el6.classList.toggle('logoMaskDarkMode')
+      }
 
-        // Add children
-        tl
-        .add({
-            targets: '.aboutButton',
-            translateX: [-250, 0],
-        })
-        .add({
-            targets: '.printButton',
-            translateX: [-250, 0],
-        })
-        .add({
-            targets: '.toggleButton',
-            translateY: [-250, 0],   
-        })
-        .add({
-            complete: fadePicsAndGrowLog,
-        })
+      function fadePicsAndGrowLog(){
+          anime({
+              targets: '.pictures', 
+              opacity: 1,
+              duration: 800,
+              easing: 'easeInOutQuad'
+          }),
+          anime({
+              targets: '.logo',
+              scale: 1.02,
+              duration: 1200,
+              easing: 'easeInOutQuad'
+          })
+      }
 
-        // const headerButtons = document.querySelectorAll('.header a')
-        // headerButtons.forEach(link => {
-        //     link.addEventListener('mouseleave', ()=>{
-        //         link.classList.add('hover-off');
-        //         setTimeout(()=>{
-        //             link.classList.remove('hover-off')
-        //         }, 200);
-        //     })
-        // })
+      /* Intro animations for nav menu elements when page loads for the first time. */
+      const tl = anime.timeline({
+      easing: 'easeOutExpo',
+      duration: 500
+      });
+
+      /* 
+        Starts with about, print and light/dark toggle buttons before finishing with
+        the picture fade in and logo grow animation. 
+      */
+      tl
+      .add({
+          targets: '.aboutButton',
+          translateX: [-250, 0],
+      })
+      .add({
+          targets: '.printButton',
+          translateX: [-250, 0],
+      })
+      .add({
+          targets: '.toggleButton',
+          translateY: [-250, 0],   
+      })
+      .add({
+          complete: fadePicsAndGrowLog,
+      })
     </script>
 </html>
