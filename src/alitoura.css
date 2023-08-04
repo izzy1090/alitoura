@@ -57,7 +57,7 @@ body {
     width: 100%;
 }
 
-.headerDarkMode a::before {
+.headerDarkMode a::after {
     content: '';
     display: block;
     width: 0%;
@@ -69,7 +69,7 @@ body {
     left: 0px;
 }
 
-.headerDarkMode a:hover::before {
+.headerDarkMode a:hover::after {
     width: 100%;
 }
 
@@ -99,11 +99,11 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     /* padding: 10px 20px; */
+    z-index: 1;
 }
 
 .logo {
     height: fit-content;
-    z-index: 0;
 }
 
 .logoMask {
@@ -112,17 +112,16 @@ body {
     height: 100%;
     width: 100%;
     animation: fadeInFromTop 1.2s forwards;
-   
 }
 
-.logoMaskDarkMode {
+/* .logoMaskDarkMode {
     position: absolute;
     background-color: #0D0D0E;
     height: 100%;
     width: 100%;
     animation: fadeInFromTop 1.2s forwards;
     
-}
+} */
 
 @keyframes fadeInFromTop {
     0% {
@@ -131,7 +130,6 @@ body {
     100% {
         transform: scaleY(0);
         transform: translate(0, 100%);
-        display: none;
     }
 }
 
@@ -144,13 +142,19 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    border: #0D0D0E;
     /* border-style: dashed; */
     max-height: 80vh;
-    padding: 50px;
+    /* padding: 50px; */
     overflow-y: hidden;
     overflow-x: scroll;
 }
+
+@-moz-document url-prefix() {
+    .carouselContainer {
+        display: flex;
+        flex-direction: row;
+    }
+  }
 
 .pictures {
     opacity: 0;
@@ -158,77 +162,77 @@ body {
 }
 
 .pic1 {
-    width: calc(40% - 20px);
-    height: calc(40% - 20px);
-    z-index: -1;
+    width: 40%;
+    height: 40%;
+    z-index: 0;
     margin-bottom: auto;
 }
 
 .pic2 {
-    width: calc(40% - 10px);
-    height: calc(40% - 10px);
-    z-index: -1;
+    width: 40%; 
+    height: 40%; 
+    z-index: 0;
     margin-top: auto;
 }
 
 .pic3 {
-    width: calc(40% - 20px);
-    height: calc(40% - 20px);
+    width: 40%; 
+    height: 40%; 
     margin-bottom: auto;
-    z-index: 0;
+    z-index: 2;
 }
 
 .pic4 {
-    width: calc(40% - 20px);
-    height: calc(40% - 20px);
+    width: 40%; 
+    height: 40%; 
     z-index: 0;
     margin-top: auto;
 }
 
 .pic5 {
-    width: calc(20% - 20px);
-    height: calc(20% - 20px);
-    z-index: -1;
+    width: 20%; 
+    height: 20%; 
+    z-index: 2;
     margin-bottom: 15em;
 }
 
 .pic6 {
-    width: calc(40% - 20px);
-    height: calc(40% - 20px);
-    z-index: -1;
+    width: 40%; 
+    height: 40%; 
+    z-index: 0;
     margin-top: 20em;
 }
 
 .pic7 {
-    width: calc(40% - 20px);
-    height: calc(40% - 20px);
-    z-index: 0;
+    width: 40%; 
+    height: 40%; 
+    z-index: 2;
 }
 
 .pic8 {
-    width: calc(40% - 20px);
-    height: calc(40% - 20px);
-    z-index: -1;
+    width: 40%; 
+    height: 40%; 
+    z-index: 0;
     margin-bottom: 300px;
 }
 
 .pic9 {
-    width: calc(20% - 20px);
-    height: calc(20% - 20px);
-    z-index: -1;
+    width: 20%; 
+    height: 20%; 
+    z-index: 0;
     margin-top: 300px;
 }
 
 .pic10 {
-    width: calc(35% - 50px );
-    height: calc(35% - 50px);
-    z-index: 0;
+    width: 35%; 
+    height: 35%; 
+    z-index: 2;
     margin-bottom: 300px;
 }
 
 .pic11 {
-    width: calc(35% - 20px);
-    height: calc(35% - 20px);
-    z-index: -1;
+    width: 35%; 
+    height: 35%; 
+    z-index: 0;
     margin-top: 270px;
 }

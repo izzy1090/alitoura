@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <link rel="stylesheet" href="alitoura.css">
@@ -18,7 +19,6 @@
             <div class="toggleButton" onClick="toggleLightDark()"></div>
             </div>
         </div>
-        
             <div class="logoContainer">
                 <div class="logoMask"></div>
                 <svg class="logo" width="778" height="228" viewBox="0 0 778 228" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -46,7 +46,6 @@
     </div>
   </body>
     <script>
-
       function toggleLightDark() {
           var el1 = document.body;
           el1.classList.toggle("bodyDarkMode");
@@ -62,25 +61,34 @@
           el6.classList.toggle('logoMaskDarkMode')
       }
 
-      function fadePicsAndGrowLog(){
-          anime({
-              targets: '.pictures', 
-              opacity: 1,
-              duration: 800,
-              easing: 'easeInOutQuad'
-          }),
-          anime({
-              targets: '.logo',
-              scale: 1.02,
-              duration: 1200,
-              easing: 'easeInOutQuad'
-          })
+      function removeLogoMask(){
+        const logoMask = document.querySelector('.logoMask');
+        logoMask.parentElement.removeChild(logoMask);
+
+        // const darkLogoMask = document.querySelector('.logoMaskDarkMode');
+        // darkLogoMask.parentElement.removeChild(darkLogoMask);
+      }
+
+      function fadePicsAndGrowLogo(){
+        anime({
+            targets: '.pictures', 
+            opacity: 1,
+            duration: 800,
+            easing: 'easeInOutQuad'
+        });
+
+        anime({
+            targets: '.logo',
+            scale: 1.02,
+            duration: 1200,
+            easing: 'easeInOutQuad'
+        });
       }
 
       /* Intro animations for nav menu elements when page loads for the first time. */
-      const tl = anime.timeline({
-      easing: 'easeOutExpo',
-      duration: 500
+      var tl = anime.timeline({
+        easing: 'easeOutExpo',
+        duration: 500
       });
 
       /* 
@@ -91,7 +99,7 @@
       .add({
           targets: '.aboutButton',
           translateX: [-250, 0],
-      })
+        })
       .add({
           targets: '.printButton',
           translateX: [-250, 0],
@@ -101,7 +109,16 @@
           translateY: [-250, 0],   
       })
       .add({
-          complete: fadePicsAndGrowLog,
+        begin: () => {
+          removeLogoMask();
+        }
       })
+      .add({
+          complete: fadePicsAndGrowLogo,
+      })
+
+      (function () {
+        var scroll = new LocomotiveScroll();
+      })();
     </script>
 </html>
