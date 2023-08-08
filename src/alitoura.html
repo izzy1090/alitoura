@@ -67,9 +67,20 @@
           el6.classList.toggle('logoMaskDarkMode')
       }
 
-      function removeLogoMask(){
+      function logoAnimation(){
         const logoMask = document.querySelector('.logoMask');
-        logoMask.parentElement.removeChild(logoMask);
+        
+        anime({
+          // Target the logo mask before moving the mask down to create a swipe in effect
+          targets: logoMask,
+          translateY: [0, '100%'],
+          duration: 1000,
+          easing: 'easeInOutQuad',
+          // Then complete the animation by removing the logo mask from the DOM
+          complete: () => {
+            logoMask.parentElement.removeChild(logoMask);
+          }
+        })
       }
 
       function fadePicsAndGrowLogo(){
@@ -88,36 +99,51 @@
         });
       }
 
-      /* Intro animations for nav menu elements when page loads for the first time. */
-      var tl = anime.timeline({
+      // Logo animation timeline
+      const tl1 = anime.timeline({
         easing: 'easeOutExpo',
-        duration: 500
       });
 
-      /* 
-        Starts with about, print and light/dark toggle buttons before finishing with
-        the picture fade in and logo grow animation. 
-      */
-      tl
-      .add({
-          targets: '.aboutButton',
-          translateX: [-250, 0],
-        })
-      .add({
-          targets: '.printButton',
-          translateX: [-250, 0],
-      })
-      .add({
-          targets: '.toggleButton',
-          translateY: [-250, 0],   
-      })
+      tl1
       .add({
         begin: () => {
-          removeLogoMask();
+          logoAnimation();
         }
-      })
+      })      
       .add({
           complete: fadePicsAndGrowLogo,
+      })
+
+      // About, print, toggle button animation timeline
+      const tl2 = anime.timeline({
+        easing: 'easeOutExpo',
+        duration: 2800
+      })
+
+      tl2.add({
+        targets: ['.aboutButton', '.printButton', '.toggleButton'],
+          opacity: 0
+      })
+      .add({
+        targets: ['.aboutButton', '.printButton', '.toggleButton'],
+        opacity: 1
+      })
+
+      // .add({
+      //   targets: '.aboutButton',
+      //   translateX: [-250, 0],
+      //   })
+      // .add({
+      //   targets: '.printButton',
+      //   translateX: [-250, 0],
+      // })
+      // .add({
+      //     targets: '.toggleButton',
+      //     translateY: [-250, 0],   
+      // })
+
+      tl1.play().finished.then(() => {
+        tl2.play().finished.then(() => {})
       })
 
       (function () {
