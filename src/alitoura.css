@@ -5,6 +5,7 @@
 
 body {
     margin: 0;
+    padding: 0;
     background-color: #F1F1EF;
     color: #0D0D0E;
     font-family: HNR;
@@ -143,7 +144,7 @@ body {
     align-items: center;
     justify-content: space-between;
     /* border-style: dashed; */
-    max-height: 85vh;
+    max-height: 80vh;
     padding: 50px;
     overflow-y: hidden;
     overflow-x: scroll;
@@ -151,82 +152,106 @@ body {
 
 .pictures {
     opacity: 0;
-    padding-right: 200px;
-    width: 900px;
+    padding-right: 100px;
+    width: 600px;
 } 
+
+#picTopMargin{
+    margin-top: 250px;
+}
+
+#picBottomMargin{
+    margin-bottom: 250px;
+}
 
 .pic1 {
-    /* width: 40%;
-    height: 40%; */
     z-index: 0;
-    margin-bottom: auto;
 } 
 
-.pic2 {
-    /* width: 40%; 
-    height: 40%;  */
+.pic2 #picTopMargin{
     z-index: 0;
-    margin-top: auto;
 }
 
 .pic3 {
-    /* width: 40%; 
-    height: 40%;  */
-    margin-bottom: auto;
     z-index: 2;
 }
 
 .pic4 {
-    /* width: 40%; 
-    height: 40%;  */
     z-index: 0;
-    margin-top: auto;
 }
 
 .pic5 {
-    /* width: 20%; 
-    height: 20%;  */
     z-index: 2;
-    margin-bottom: 15em;
 }
 
 .pic6 {
-    /* width: 40%; 
-    height: 40%;  */
     z-index: 0;
-    margin-top: 20em;
 }
 
 .pic7 {
-    /* width: 40%; 
-    height: 40%;  */
     z-index: 2;
 }
 
 .pic8 {
-    /* width: 40%; 
-    height: 40%;  */
     z-index: 0;
-    margin-bottom: 300px;
 }
 
 .pic9 {
-    /* width: 20%; 
-    height: 20%;  */
     z-index: 0;
-    margin-top: 300px;
 }
 
 .pic10 {
-    /* width: 35%; 
-    height: 35%;  */
     z-index: 2;
-    margin-bottom: 300px;
 }
 
 .pic11 {
-    /* width: 35%; 
-    height: 35%;  */
     z-index: 0;
-    margin-top: 270px;
+}
+
+.pic11 {
+    z-index: 0;
+}
+
+.pic12 {
+    z-index: 2;
+}
+
+.pic13 {
+    z-index: 0;
+}
+
+.pic14 {
+    z-index: 2;
+}
+
+.pic15 {
+    z-index: 0;
+}
+
+.pic16 {
+    z-index: 2;
+}
+
+.pic17 {
+    z-index: 0;
+}
+
+.pic18 {
+    z-index: 2;
+}
+
+.pic19 {
+    z-index: 0;
+}
+
+.pic20 {
+    z-index: 2;
+}
+
+.pic21 {
+    z-index: 0;
+}
+
+.pic22 {
+    z-index: 2;
 }
