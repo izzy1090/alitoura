@@ -26,32 +26,39 @@
             </svg>
         </div>
         <div class="carouselContainer">
-            <img src="../src/pics/1.jpg" class="pictures pic1" id="picBottomMargin">
-            <img src="../src/pics/2.jpg" class="pictures pic2" id="picTopMargin">
-            <img src="../src/pics/3.jpg" class="pictures pic3" id="picBottomMargin" loading="lazy">
-            <img src="../src/pics/4.jpg" class="pictures pic4" id="picTopMargin" loading="lazy">
-            <img src="../src/pics/5.jpg" class="pictures pic5" id="picBottomMargin" loading="lazy">
-            <img src="../src/pics/6.jpg" class="pictures pic6" id="picTopMargin" loading="lazy">
-            <img src="../src/pics/7.jpg" class="pictures pic7" id="picBottomMargin" loading="lazy">
-            <img src="../src/pics/8.jpg" class="pictures pic8" id="picTopMargin" loading="lazy">
-            <img src="../src/pics/9.jpg" class="pictures pic9" id="picBottomMargin" loading="lazy">
-            <img src="../src/pics/10.jpg" class="pictures pic10" id="picTopMargin" loading="lazy">
-            <img src="../src/pics/11.jpg" class="pictures pic11" id="picBottomMargin" loading="lazy">
-            <img src="../src/pics/12.jpg" class="pictures pic12" id="picTopMargin" loading="lazy">
-            <img src="../src/pics/13.jpg" class="pictures pic13" id="picBottomMargin" loading="lazy">
-            <img src="../src/pics/14.jpg" class="pictures pic14" id="picTopMargin" loading="lazy">
-            <img src="../src/pics/15.jpg" class="pictures pic15" id="picBottomMargin" loading="lazy">
-            <img src="../src/pics/16.jpg" class="pictures pic16" id="picTopMargin" loading="lazy">
-            <img src="../src/pics/17.jpg" class="pictures pic17" id="picBottomMargin" loading="lazy"> 
-            <img src="../src/pics/18.jpg" class="pictures pic18" id="picTopMargin" loading="lazy">  
-            <img src="../src/pics/19.jpg" class="pictures pic19" id="picBottomMargin" loading="lazy">
-            <img src="../src/pics/20.jpg" class="pictures pic20" id="picTopMargin" loading="lazy">
-            <img src="../src/pics/21.jpg" class="pictures pic21" id="picBottomMargin" loading="lazy">  
-            <img src="../src/pics/22.jpg" class="pictures pic22" id="picTopMargin" loading="lazy">
-        </div> 
+          <img src="../src/pics/1.jpg" class="pic1" id="picBottomMargin">
+          <img src="../src/pics/2.jpg" class="pic2" id="picTopMargin">
+          <img src="../src/pics/3.jpg" class="pic3" id="picBottomMargin" loading="lazy">
+          <img src="../src/pics/4.jpg" class="pic4" id="picTopMargin" loading="lazy">
+          <img src="../src/pics/5.jpg" class="pic5" id="picBottomMargin" loading="lazy">
+          <img src="../src/pics/6.jpg" class="pic6" id="picTopMargin" loading="lazy">
+          <img src="../src/pics/7.jpg" class="pic7" id="picBottomMargin" loading="lazy">
+          <img src="../src/pics/8.jpg" class="pic8" id="picTopMargin" loading="lazy">
+          <img src="../src/pics/9.jpg" class="pic9" id="picBottomMargin" loading="lazy">
+          <img src="../src/pics/10.jpg" class="pic10" id="picTopMargin" loading="lazy">
+          <img src="../src/pics/11.jpg" class="pic11" id="picBottomMargin" loading="lazy">
+          <img src="../src/pics/12.jpg" class="pic12" id="picTopMargin" loading="lazy">
+          <img src="../src/pics/13.jpg" class="pic13" id="picBottomMargin" loading="lazy">
+          <img src="../src/pics/14.jpg" class="pic14" id="picTopMargin" loading="lazy">
+          <img src="../src/pics/15.jpg" class="pic15" id="picBottomMargin" loading="lazy">
+          <img src="../src/pics/16.jpg" class="pic16" id="picTopMargin" loading="lazy">
+          <img src="../src/pics/17.jpg" class="pic17" id="picBottomMargin" loading="lazy"> 
+          <img src="../src/pics/18.jpg" class="pic18" id="picTopMargin" loading="lazy">  
+          <img src="../src/pics/19.jpg" class="pic19" id="picBottomMargin" loading="lazy">
+          <img src="../src/pics/20.jpg" class="pic20" id="picTopMargin" loading="lazy">
+          <img src="../src/pics/21.jpg" class="pic21" id="picBottomMargin" loading="lazy">  
+          <img src="../src/pics/22.jpg" class="pic22" id="picTopMargin" loading="lazy">
+        </div>
     </div>
   </body>
     <script>
+      
+      // var scroll = new LocomotiveScroll({
+      //   smooth: true, 
+      //   smoothMobile: false,
+      //   multiplier: 1, 
+      // })
+
       function toggleLightDark() {
           var el1 = document.body;
           el1.classList.toggle("bodyDarkMode");
@@ -85,7 +92,7 @@
 
       function fadePicsAndGrowLogo(){
         anime({
-            targets: '.pictures', 
+            targets: '.carouselContainer img', 
             opacity: 1,
             duration: 800,
             easing: 'easeInOutQuad'
@@ -134,8 +141,5 @@
         tl2.play().finished.then(() => {})
       })
 
-      (function () {
-        var scroll = new LocomotiveScroll();
-      })();
     </script>
 </html>
