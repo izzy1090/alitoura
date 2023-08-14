@@ -145,10 +145,10 @@ body {
     width: 600px;
   } 
 
-.fade-in-element {
+/* .fade-in-element {
     opacity: 1;
-    transition: opacity 0.5s;
-}
+    transition: opacity 3.0s;
+} */
 
 #picTopMargin{
     margin-top: 250px;
