@@ -133,18 +133,22 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    /* border-style: dashed; */
     max-height: 80vh;
     padding: 50px;
     overflow-y: hidden;
     overflow-x: scroll;
 }
 
-.pictures {
+.carouselContainer img {
     opacity: 0;
     padding-right: 100px;
     width: 600px;
-} 
+  } 
+
+/* .fade-in-element {
+    opacity: 1;
+    transition: opacity 3.0s;
+} */
 
 #picTopMargin{
     margin-top: 250px;
@@ -158,7 +162,7 @@ body {
     z-index: 0;
 } 
 
-.pic2 #picTopMargin{
+.pic2 {
     z-index: 0;
 }
 
