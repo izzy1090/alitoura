@@ -52,7 +52,6 @@ body {
     width: 0%;
     height: 2px;
     background-color: #0D0D0E;
-    /* position: absolute; */
     transition: width 0.2s ease-in-out;
     bottom: -3px;
     left: 0;
@@ -69,7 +68,6 @@ body {
     height: 2px;
     background-color: #F1F1EF;
     transition: width 0.2s ease-in-out;
-    /* position: absolute; */
     bottom: -3px;
     left: 0px;
 }
@@ -136,11 +134,9 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    max-height: 80vh;
+    max-height: 100%;
     padding-top: 70px;
     padding: 50px;
-    /* overflow-y: hidden;
-    overflow-x: scroll; */
 }
 
 .carouselContainer img {
@@ -149,16 +145,11 @@ body {
     width: 500px;
   } 
 
-/* .fade-in-element {
-    opacity: 1;
-    transition: opacity 3.0s;
-} */
-
-#picTopMargin{
+.picTopMargin{
     margin-top: 250px;
 }
 
-#picBottomMargin{
+.picBottomMargin{
     margin-bottom: 250px;
 }
 
