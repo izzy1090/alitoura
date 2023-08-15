@@ -2,6 +2,7 @@
 <html>
   <head>
     <link rel="stylesheet" href="alitoura.css">
+    <link rel="stylesheet" href="locomotive-scroll.css">
     <script src="anime.min.js"></script>
     <script src="locomotive-scroll.min.js"></script>
   </head>
@@ -27,142 +28,147 @@
         </div>
         <div data-scroll-container>
           <div data-scroll-section>
-            <div class="carouselContainer">
-              <img src="../src/pics/1.jpg" class="pic1" id="picBottomMargin">
-              <img src="../src/pics/2.jpg" class="pic2" id="picTopMargin">
-              <img src="../src/pics/3.jpg" class="pic3" id="picBottomMargin" loading="lazy">
-              <img src="../src/pics/4.jpg" class="pic4" id="picTopMargin" loading="lazy">
-              <img src="../src/pics/5.jpg" class="pic5" id="picBottomMargin" loading="lazy">
-              <img src="../src/pics/6.jpg" class="pic6" id="picTopMargin" loading="lazy">
-              <img src="../src/pics/7.jpg" class="pic7" id="picBottomMargin" loading="lazy">
-              <img src="../src/pics/8.jpg" class="pic8" id="picTopMargin" loading="lazy">
-              <img src="../src/pics/9.jpg" class="pic9" id="picBottomMargin" loading="lazy">
-              <img src="../src/pics/10.jpg" class="pic10" id="picTopMargin" loading="lazy">
-              <img src="../src/pics/11.jpg" class="pic11" id="picBottomMargin" loading="lazy">
-              <img src="../src/pics/12.jpg" class="pic12" id="picTopMargin" loading="lazy">
-              <img src="../src/pics/13.jpg" class="pic13" id="picBottomMargin" loading="lazy">
-              <img src="../src/pics/14.jpg" class="pic14" id="picTopMargin" loading="lazy">
-              <img src="../src/pics/15.jpg" class="pic15" id="picBottomMargin" loading="lazy">
-              <img src="../src/pics/16.jpg" class="pic16" id="picTopMargin" loading="lazy">
-              <img src="../src/pics/17.jpg" class="pic17" id="picBottomMargin" loading="lazy"> 
-              <img src="../src/pics/18.jpg" class="pic18" id="picTopMargin" loading="lazy">  
-              <img src="../src/pics/19.jpg" class="pic19" id="picBottomMargin" loading="lazy">
-              <img src="../src/pics/20.jpg" class="pic20" id="picTopMargin" loading="lazy">
-              <img src="../src/pics/21.jpg" class="pic21" id="picBottomMargin" loading="lazy">  
-              <img src="../src/pics/22.jpg" class="pic22" id="picTopMargin" loading="lazy">
-            </div>
+          <div class="carouselContainer">
+            <img src="../src/pics/1.jpg" class="pic1 picBottomMargin" data-scroll data-scroll-speed="1">
+            <img src="../src/pics/2.jpg" class="pic2 picTopMargin" data-scroll data-scroll-speed="2">
+            <img src="../src/pics/3.jpg" class="pic3 picBottomMargin" data-scroll data-scroll-speed="3">
+            <img src="../src/pics/4.jpg" class="pic4 picTopMargin" data-scroll data-scroll-speed="4">
+            <img src="../src/pics/5.jpg" class="pic5 picBottomMargin" data-scroll data-scroll-speed="3">
+            <img src="../src/pics/6.jpg" class="pic6 picTopMargin" data-scroll data-scroll-speed="2">
+            <img src="../src/pics/7.jpg" class="pic7 picBottomMargin" data-scroll data-scroll-speed="1">
+            <img src="../src/pics/8.jpg" class="pic8 picTopMargin" data-scroll data-scroll-speed="2">
+            <img src="../src/pics/9.jpg" class="pic9 picBottomMargin" data-scroll data-scroll-speed="3">
+            <img src="../src/pics/10.jpg" class="pic10 picTopMargin" data-scroll data-scroll-speed="4">
+            <img src="../src/pics/11.jpg" class="pic11 picBottomMargin" data-scroll data-scroll-speed="3">
+            <img src="../src/pics/12.jpg" class="pic12 picTopMargin" data-scroll data-scroll-speed="2">
+            <img src="../src/pics/13.jpg" class="pic13 picBottomMargin" data-scroll data-scroll-speed="1">
+            <img src="../src/pics/14.jpg" class="pic14 picTopMargin" data-scroll data-scroll-speed="2">
+            <img src="../src/pics/15.jpg" class="pic15 picBottomMargin" data-scroll data-scroll-speed="3">
+            <img src="../src/pics/16.jpg" class="pic16 picTopMargin" data-scroll data-scroll-speed="4">
+            <img src="../src/pics/17.jpg" class="pic17 picBottomMargin" data-scroll data-scroll-speed="3">  
+            <img src="../src/pics/18.jpg" class="pic18 picTopMargin" data-scroll data-scroll-speed="2">
+            <img src="../src/pics/19.jpg" class="pic19 picBottomMargin" data-scroll data-scroll-speed="1">
+            <img src="../src/pics/20.jpg" class="pic20 picTopMargin"  data-scroll data-scroll-speed="2">
+            <img src="../src/pics/21.jpg" class="pic21 picBottomMargin" data-scroll data-scroll-speed="3">   
+            <img src="../src/pics/22.jpg" class="pic22 picTopMargin" data-scroll data-scroll-speed="1">
+          </div>
         </div>
-      </div>
+        </div>
     </div>
   </body>
-    <script>
-      
-      (function () {
+  <script>
+    (function () {
         var scroll = new LocomotiveScroll({
-
+          el: document.querySelector('[data-scroll-container]'),
+          smooth: true, 
+          multiplier: 1.5,
+          direction: "horizontal",
+          scrollFromAnywhere: true
         });
-      })();
+    })();
+  </script>
+  <script>
+    
+    function toggleLightDark() {
+        var el1 = document.body;
+        el1.classList.toggle("bodyDarkMode");
+        var el2 = document.getElementsByClassName('toggleButton')[0];
+        el2.classList.toggle("buttonDarkMode");
+        var el3 = document.getElementsByClassName('logo')[0]; //light mode
+        el3.classList.toggle("logoDarkMode");
+        var el4 = document.getElementsByClassName('logo')[1]; //dark mode
+        el4.classList.toggle("logoDarkMode");
+        var el5 = document.getElementsByClassName('navMenu')[0];
+        el5.classList.toggle("headerDarkMode");
+        var el6 = document.getElementsByClassName('logoMask')[0];
+        el6.classList.toggle('logoMaskDarkMode')
+    }
 
-      function toggleLightDark() {
-          var el1 = document.body;
-          el1.classList.toggle("bodyDarkMode");
-          var el2 = document.getElementsByClassName('toggleButton')[0];
-          el2.classList.toggle("buttonDarkMode");
-          var el3 = document.getElementsByClassName('logo')[0]; //light mode
-          el3.classList.toggle("logoDarkMode");
-          var el4 = document.getElementsByClassName('logo')[1]; //dark mode
-          el4.classList.toggle("logoDarkMode");
-          var el5 = document.getElementsByClassName('navMenu')[0];
-          el5.classList.toggle("headerDarkMode");
-          var el6 = document.getElementsByClassName('logoMask')[0];
-          el6.classList.toggle('logoMaskDarkMode')
-      }
+    function logoAnimation(){
+      const logoMask = document.querySelector('.logoMask');
+      
+      anime({
+        // Target the logo mask before moving the mask down to create a swipe in effect
+        targets: logoMask,
+        translateY: [0, '100%'],
+        duration: 1000,
+        easing: 'easeInOutQuad',
+        // Then complete the animation by removing the logo mask from the DOM
+        complete: () => {
+          logoMask.parentElement.removeChild(logoMask);
+        }
+      })
+    }
 
-      function logoAnimation(){
-        const logoMask = document.querySelector('.logoMask');
-        
-        anime({
-          // Target the logo mask before moving the mask down to create a swipe in effect
-          targets: logoMask,
-          translateY: [0, '100%'],
-          duration: 1000,
-          easing: 'easeInOutQuad',
-          // Then complete the animation by removing the logo mask from the DOM
-          complete: () => {
-            logoMask.parentElement.removeChild(logoMask);
-          }
-        })
-      }
-
-      function fadePicsAndGrowLogo(){
-        anime({
-            targets: '.carouselContainer img', 
-            opacity: 1,
-            duration: 800,
-            easing: 'easeInOutQuad'
-        });
-
-        anime({
-            targets: '.logo',
-            scale: 1.02,
-            duration: 1200,
-            easing: 'easeInOutQuad'
-        });
-      }
-
-      // Logo animation timeline
-      const tl1 = anime.timeline({
-        easing: 'easeOutExpo',
+    function fadePicsAndGrowLogo(){
+      anime({
+          targets: '.carouselContainer img', 
+          opacity: 1,
+          duration: 800,
+          easing: 'easeInOutQuad'
       });
 
-      tl1
-      .add({
-        begin: () => {
-          logoAnimation();
-        }
-      })      
-      .add({
-          complete: fadePicsAndGrowLogo,
-      })
+      anime({
+          targets: '.logo',
+          scale: 1.02,
+          duration: 1200,
+          easing: 'easeInOutQuad'
+      });
+    }
 
-     
-      // About, print, toggle button animation timeline
-      var tl2 = anime.timeline({
-        easing: 'easeOutExpo',
-        duration: 500,
-        
-      })
+    // Logo animation timeline
+    const tl1 = anime.timeline({
+      easing: 'easeOutExpo',
+    });
 
-      tl2.add({
-        targets: ['.aboutButton'],
-          opacity: 0, 
-          delay: 2000
-      })
-      .add({
-        targets: ['.aboutButton'],
-        opacity: 1,
-      })
-      .add({
-        targets: ['.printButton'],
-        opacity: 0,
-      })
-      .add({
-        targets: ['.printButton'],
-        opacity: 1,
-      })
-      .add({
-        targets: ['.toggleButton'],
-        opacity: 0,
-      })
-      .add({
-        targets: ['.toggleButton'],
-        opacity: 1,
-      })
+    tl1
+    .add({
+      begin: () => {
+        logoAnimation();
+      }
+    })      
+    .add({
+        complete: fadePicsAndGrowLogo,
+    })
 
-      // Where all the action happens!
-      tl1.play().finished.then(() => {
-        tl2.play().finished.then(() => {  })
-      })
+    
+    // About, print, toggle button animation timeline
+    var tl2 = anime.timeline({
+      easing: 'easeOutExpo',
+      duration: 500,
+      
+    })
 
-    </script>
+    tl2.add({
+      targets: ['.aboutButton'],
+        opacity: 0, 
+        delay: 2000
+    })
+    .add({
+      targets: ['.aboutButton'],
+      opacity: 1,
+    })
+    .add({
+      targets: ['.printButton'],
+      opacity: 0,
+    })
+    .add({
+      targets: ['.printButton'],
+      opacity: 1,
+    })
+    .add({
+      targets: ['.toggleButton'],
+      opacity: 0,
+    })
+    .add({
+      targets: ['.toggleButton'],
+      opacity: 1,
+    })
+
+    // Where all the action happens!
+    tl1.play().finished.then(() => {
+      tl2.play().finished.then(() => {  })
+    })
+
+  </script>
 </html>
