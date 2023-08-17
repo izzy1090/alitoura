@@ -66,12 +66,6 @@
         scrollFromAnywhere: true
       });
     })();
-
-    function HideBrowserScrollbar() {
-      let scrollHide = document.createElement("style");
-      scrollHide.innerHTML = `body::-webkit-scrollbar {display: none;}`;
-      document.head.appendChild(scrollHide);
-    }
     
     function toggleLightDark() {
         var el1 = document.body;
