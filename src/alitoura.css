@@ -110,15 +110,15 @@ body {
     height: fit-content;
 }
 
+.logoDarkMode {
+    display: none;
+}
+
 .logoMask {
     position: absolute;
     background-color: #F1F1EF;
     height: 100%;
     width: 100%;
-}
-
-.logoDarkMode {
-    display: none;
 }
 
 .carouselContainer {
@@ -135,7 +135,7 @@ body {
     opacity: 0;
     padding-right: 100px;
     width: 500px;
-  } 
+} 
 
 img:nth-child(even){
     z-index: 0;
