@@ -117,15 +117,6 @@ body {
     width: 100%;
 }
 
-/* .logoMaskDarkMode {
-    position: absolute;
-    background-color: #0D0D0E;
-    height: 100%;
-    width: 100%;
-    animation: fadeInFromTop 1.2s forwards;
-    
-} */
-
 .logoDarkMode {
     display: none;
 }
@@ -145,6 +136,15 @@ body {
     padding-right: 100px;
     width: 500px;
   } 
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.fade-in.loaded {
+    opacity: 1;
+}
 
 .picTopMargin{
     margin-top: 250px;
