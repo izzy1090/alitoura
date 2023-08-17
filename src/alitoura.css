@@ -137,111 +137,12 @@ body {
     width: 500px;
   } 
 
-.fade-in {
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-}
-
-.fade-in.loaded {
-    opacity: 1;
-}
-
-.picTopMargin{
+img:nth-child(even){
+    z-index: 0;
     margin-top: 250px;
 }
 
-.picBottomMargin{
+img:nth-child(odd){
+    z-index: 2;
     margin-bottom: 250px;
-}
-
-.pic1 {
-    z-index: 0;
-} 
-
-.pic2 {
-    z-index: 0;
-}
-
-.pic3 {
-    z-index: 2;
-}
-
-.pic4 {
-    z-index: 0;
-}
-
-.pic5 {
-    z-index: 2;
-}
-
-.pic6 {
-    z-index: 0;
-}
-
-.pic7 {
-    z-index: 2;
-}
-
-.pic8 {
-    z-index: 0;
-}
-
-.pic9 {
-    z-index: 0;
-}
-
-.pic10 {
-    z-index: 2;
-}
-
-.pic11 {
-    z-index: 0;
-}
-
-.pic11 {
-    z-index: 0;
-}
-
-.pic12 {
-    z-index: 2;
-}
-
-.pic13 {
-    z-index: 0;
-}
-
-.pic14 {
-    z-index: 2;
-}
-
-.pic15 {
-    z-index: 0;
-}
-
-.pic16 {
-    z-index: 2;
-}
-
-.pic17 {
-    z-index: 0;
-}
-
-.pic18 {
-    z-index: 2;
-}
-
-.pic19 {
-    z-index: 0;
-}
-
-.pic20 {
-    z-index: 2;
-}
-
-.pic21 {
-    z-index: 0;
-}
-
-.pic22 {
-    z-index: 2;
 }

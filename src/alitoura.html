@@ -4,8 +4,6 @@
     <link rel="stylesheet" href="alitoura.css">
     <link rel="stylesheet" href="locomotive-scroll.css">
     <script src="anime.min.js"></script>
-    <script src="locomotive-scroll.min.js"></script>
-    <script></script>
   </head>
   <body>
     <div class="pageContent">
@@ -30,42 +28,43 @@
         <div data-scroll-container>
           <div data-scroll-section>
           <div class="carouselContainer">
-            <img src="../src/pics/1.jpg" class="pic1 picBottomMargin" data-scroll data-scroll-speed="1">
-            <img src="../src/pics/2.jpg" class="pic2 picTopMargin" data-scroll data-scroll-speed="2">
-            <img src="../src/pics/3.jpg" class="pic3 picBottomMargin" data-scroll data-scroll-speed="3">
-            <img src="../src/pics/4.jpg" class="pic4 picTopMargin" data-scroll data-scroll-speed="4">
-            <img src="../src/pics/5.jpg" class="pic5 picBottomMargin" data-scroll data-scroll-speed="3">
-            <img src="../src/pics/6.jpg" class="pic6 picTopMargin" data-scroll data-scroll-speed="2">
-            <img src="../src/pics/7.jpg" class="pic7 picBottomMargin" data-scroll data-scroll-speed="1">
-            <img src="../src/pics/8.jpg" class="pic8 picTopMargin" data-scroll data-scroll-speed="2">
-            <img src="../src/pics/9.jpg" class="pic9 picBottomMargin" data-scroll data-scroll-speed="3">
-            <img src="../src/pics/10.jpg" class="pic10 picTopMargin" data-scroll data-scroll-speed="4">
-            <img src="../src/pics/11.jpg" class="pic11 picBottomMargin" data-scroll data-scroll-speed="3">
-            <img src="../src/pics/12.jpg" class="pic12 picTopMargin" data-scroll data-scroll-speed="2">
-            <img src="../src/pics/13.jpg" class="pic13 picBottomMargin" data-scroll data-scroll-speed="1">
-            <img src="../src/pics/14.jpg" class="pic14 picTopMargin" data-scroll data-scroll-speed="2">
-            <img src="../src/pics/15.jpg" class="pic15 picBottomMargin" data-scroll data-scroll-speed="3">
-            <img src="../src/pics/16.jpg" class="pic16 picTopMargin" data-scroll data-scroll-speed="4">
-            <img src="../src/pics/17.jpg" class="pic17 picBottomMargin" data-scroll data-scroll-speed="3">  
-            <img src="../src/pics/18.jpg" class="pic18 picTopMargin" data-scroll data-scroll-speed="2">
-            <img src="../src/pics/19.jpg" class="pic19 picBottomMargin" data-scroll data-scroll-speed="1">
-            <img src="../src/pics/20.jpg" class="pic20 picTopMargin"  data-scroll data-scroll-speed="2">
-            <img src="../src/pics/21.jpg" class="pic21 picBottomMargin" data-scroll data-scroll-speed="3">   
-            <img src="../src/pics/22.jpg" class="pic22 picTopMargin" data-scroll data-scroll-speed="1">
+            <img src="../src/pics/1.jpg" class="pic" data-scroll data-scroll-speed="1">
+            <img src="../src/pics/2.jpg" class="pic" data-scroll data-scroll-speed="4">
+            <img src="../src/pics/3.jpg" class="pic" data-scroll data-scroll-speed="6">
+            <img src="../src/pics/4.jpg" class="pic" data-scroll data-scroll-speed="8">
+            <img src="../src/pics/5.jpg" class="pic" data-scroll data-scroll-speed="6">
+            <img src="../src/pics/6.jpg" class="pic" data-scroll data-scroll-speed="4">
+            <img src="../src/pics/7.jpg" class="pic" data-scroll data-scroll-speed="1">
+            <img src="../src/pics/8.jpg" class="pic" data-scroll data-scroll-speed="4">
+            <img src="../src/pics/9.jpg" class="pic" data-scroll data-scroll-speed="8">
+            <img src="../src/pics/10.jpg" class="pic" data-scroll data-scroll-speed="6">
+            <img src="../src/pics/11.jpg" class="pic" data-scroll data-scroll-speed="4">
+            <img src="../src/pics/12.jpg" class="pic" data-scroll data-scroll-speed="1">
+            <img src="../src/pics/13.jpg" class="pic" data-scroll data-scroll-speed="4">
+            <img src="../src/pics/14.jpg" class="pic" data-scroll data-scroll-speed="6">
+            <img src="../src/pics/15.jpg" class="pic" data-scroll data-scroll-speed="8">
+            <img src="../src/pics/16.jpg" class="pic" data-scroll data-scroll-speed="6">
+            <img src="../src/pics/17.jpg" class="pic" data-scroll data-scroll-speed="4">  
+            <img src="../src/pics/18.jpg" class="pic" data-scroll data-scroll-speed="1">
+            <img src="../src/pics/19.jpg" class="pic" data-scroll data-scroll-speed="4">
+            <img src="../src/pics/20.jpg" class="pic"  data-scroll data-scroll-speed="6">
+            <img src="../src/pics/21.jpg" class="pic" data-scroll data-scroll-speed="4">   
+            <img src="../src/pics/22.jpg" class="pic" data-scroll data-scroll-speed="1">
           </div>
         </div>
         </div>
     </div>
   </body>
+  <script src="locomotive-scroll.min.js"></script>
   <script>
-    
+    (function(){
     var scroll = new LocomotiveScroll({
       el: document.querySelector('[data-scroll-container]'),
       smooth: true, 
-      multiplier: 1,
+      multiplier: 0.65,
       direction: "horizontal",
       scrollFromAnywhere: true
-    }); 
+    }); })();
     
     function toggleLightDark() {
         var el1 = document.body;
