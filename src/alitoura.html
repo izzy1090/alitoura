@@ -3,7 +3,10 @@
   <head>
     <link rel="stylesheet" href="alitoura.css">
     <link rel="stylesheet" href="locomotive-scroll.css">
+    <link rel="stylesheet" href="lightbox.css"/>
     <script src="anime.min.js"></script>
+    <script src="locomotive-scroll.min.js"></script>
+    <script src="lightbox-plus-jquery.js"></script>
   </head>
   <body>
     <div class="pageContent">
@@ -28,34 +31,78 @@
       <div data-scroll-container>
         <div data-scroll-section>
           <div class="carouselContainer">
-            <img src="../src/pics/1.jpg" class="pic" data-scroll data-scroll-speed="1">
-            <img src="../src/pics/2.jpg" class="pic" data-scroll data-scroll-speed="4">
-            <img src="../src/pics/3.jpg" class="pic" data-scroll data-scroll-speed="6">
-            <img src="../src/pics/4.jpg" class="pic" data-scroll data-scroll-speed="8">
-            <img src="../src/pics/5.jpg" class="pic" data-scroll data-scroll-speed="6">
-            <img src="../src/pics/6.jpg" class="pic" data-scroll data-scroll-speed="4">
-            <img src="../src/pics/7.jpg" class="pic" data-scroll data-scroll-speed="1">
-            <img src="../src/pics/8.jpg" class="pic" data-scroll data-scroll-speed="4">
-            <img src="../src/pics/9.jpg" class="pic" data-scroll data-scroll-speed="8">
-            <img src="../src/pics/10.jpg" class="pic" data-scroll data-scroll-speed="6">
-            <img src="../src/pics/11.jpg" class="pic" data-scroll data-scroll-speed="4">
-            <img src="../src/pics/12.jpg" class="pic" data-scroll data-scroll-speed="1">
-            <img src="../src/pics/13.jpg" class="pic" data-scroll data-scroll-speed="4">
-            <img src="../src/pics/14.jpg" class="pic" data-scroll data-scroll-speed="6">
-            <img src="../src/pics/15.jpg" class="pic" data-scroll data-scroll-speed="8">
-            <img src="../src/pics/16.jpg" class="pic" data-scroll data-scroll-speed="6">
-            <img src="../src/pics/17.jpg" class="pic" data-scroll data-scroll-speed="4">  
-            <img src="../src/pics/18.jpg" class="pic" data-scroll data-scroll-speed="1">
-            <img src="../src/pics/19.jpg" class="pic" data-scroll data-scroll-speed="4">
-            <img src="../src/pics/20.jpg" class="pic"  data-scroll data-scroll-speed="6">
-            <img src="../src/pics/21.jpg" class="pic" data-scroll data-scroll-speed="4">   
-            <img src="../src/pics/22.jpg" class="pic" data-scroll data-scroll-speed="1">
+            <a href="../src/pics/1.jpg" data-lightbox="slideshow">
+              <img src="../src/pics/1.jpg" data-scroll data-scroll-speed="1" >
+            </a>
+            <a href="../src/pics/2.jpg" data-lightbox="slideshow">
+              <img src="../src/pics/2.jpg" data-scroll data-scroll-speed="4" >
+            </a>
+            <a href="../src/pics/3.jpg" data-lightbox="slideshow">
+              <img src="../src/pics/3.jpg" data-scroll data-scroll-speed="6">
+            </a>
+            <a href="../src/pics/4.jpg" data-lightbox="slideshow">
+              <img src="../src/pics/4.jpg" data-scroll data-scroll-speed="8">
+            </a>
+            <a href="../src/pics/5.jpg" data-lightbox="slideshow">
+              <img src="../src/pics/5.jpg" data-scroll data-scroll-speed="6">
+            </a>
+            <a href="../src/pics/6.jpg" data-lightbox="slideshow">
+              <img src="../src/pics/6.jpg" data-scroll data-scroll-speed="4">
+            </a>
+            <a href="../src/pics/7.jpg" data-lightbox="slideshow">
+              <img src="../src/pics/7.jpg" data-scroll data-scroll-speed="1">
+            </a>
+            <a href="../src/pics/8.jpg" data-lightbox="slideshow">
+              <img src="../src/pics/8.jpg" data-scroll data-scroll-speed="4">
+            </a>
+            <a href="../src/pics/9.jpg" data-lightbox="lightboxOverlay">
+              <img src="../src/pics/9.jpg" data-scroll data-scroll-speed="8">
+            </a>
+            <a href="../src/pics/10.jpg" data-lightbox="lightboxOverlay">
+              <img src="../src/pics/10.jpg" data-scroll data-scroll-speed="6">
+            </a>
+            <a href="../src/pics/11.jpg" data-lightbox="lightboxOverlay">
+              <img src="../src/pics/11.jpg" data-scroll data-scroll-speed="4">
+            </a>
+            <a href="../src/pics/12.jpg" data-lightbox="lightboxOverlay">
+              <img src="../src/pics/12.jpg" data-scroll data-scroll-speed="1">
+            </a>
+            <a href="../src/pics/13.jpg" data-lightbox="lightboxOverlay">
+              <img src="../src/pics/13.jpg" data-scroll data-scroll-speed="4">
+            </a>
+            <a href="../src/pics/14.jpg" data-lightbox="lightboxOverlay">
+              <img src="../src/pics/14.jpg" data-scroll data-scroll-speed="6">
+            </a>
+            <a href="../src/pics/15.jpg" data-lightbox="lightboxOverlay">
+              <img src="../src/pics/15.jpg" data-scroll data-scroll-speed="8">
+            </a>
+            <a href="../src/pics/16.jpg" data-lightbox="lightboxOverlay">
+              <img src="../src/pics/16.jpg" data-scroll data-scroll-speed="6">
+            </a>
+            <a href="../src/pics/17.jpg" data-lightbox="lightboxOverlay">
+              <img src="../src/pics/17.jpg" data-scroll data-scroll-speed="4">  
+            </a>
+            <a href="../src/pics/18.jpg" data-lightbox="lightboxOverlay">
+              <img src="../src/pics/18.jpg" data-scroll data-scroll-speed="1">
+            </a>
+            <a href="../src/pics/19.jpg" data-lightbox="lightboxOverlay">
+              <img src="../src/pics/19.jpg" data-scroll data-scroll-speed="4">
+            </a>
+            <a href="../src/pics/20.jpg" data-lightbox="lightboxOverlay">
+              <img src="../src/pics/20.jpg"  data-scroll data-scroll-speed="6">
+            </a>
+            
+              <img src="../src/pics/21.jpg" data-scroll data-scroll-speed="4">   
+            </a>
+            <a href="../src/pics/22.jpg" data-lightbox="lightboxOverlay">
+              <img src="../src/pics/22.jpg" data-scroll data-scroll-speed="1">
+            </a>
           </div>
         </div>
       </div>
     </div>
   </body>
-  <script src="locomotive-scroll.min.js"></script>
+  
   <script>
     (function(){
       var scroll = new LocomotiveScroll({

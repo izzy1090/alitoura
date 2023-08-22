@@ -104,10 +104,16 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
+    pointer-events: none;
 }
 
 .logo {
     height: fit-content;
+    
+}
+
+.slideshow {
+    margin-top: 200px;
 }
 
 .logoDarkMode {
@@ -137,12 +143,12 @@ body {
     width: 500px;
 } 
 
-img:nth-child(even){
+.carouselContainer a:nth-child(even) img{
     z-index: 0;
     margin-top: 250px;
 }
 
-img:nth-child(odd){
+.carouselContainer a:nth-child(odd) img{
     z-index: 2;
     margin-bottom: 250px;
 }
