@@ -139,16 +139,17 @@ body {
 
 .carouselContainer img {
     opacity: 0;
-    padding-right: 100px;
     width: 500px;
 } 
 
-.carouselContainer a:nth-child(even) img{
+.carouselContainer .imageWrapper:nth-child(even) {
     z-index: 0;
-    margin-top: 250px;
+    padding-right: 100px;
+    padding-top: 250px;
 }
 
-.carouselContainer a:nth-child(odd) img{
-    z-index: 2;
-    margin-bottom: 250px;
+.carouselContainer .imageWrapper:nth-child(odd) {
+    z-index: 0;
+    padding-right: 100px;
+    padding-bottom: 250px;
 }
