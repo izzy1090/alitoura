@@ -104,10 +104,20 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
+    pointer-events: none;
 }
 
 .logo {
     height: fit-content;
+    
+}
+
+.slideshow {
+    margin-top: 200px;
+}
+
+.logoDarkMode {
+    display: none;
 }
 
 .logoMask {
@@ -115,19 +125,6 @@ body {
     background-color: #F1F1EF;
     height: 100%;
     width: 100%;
-}
-
-/* .logoMaskDarkMode {
-    position: absolute;
-    background-color: #0D0D0E;
-    height: 100%;
-    width: 100%;
-    animation: fadeInFromTop 1.2s forwards;
-    
-} */
-
-.logoDarkMode {
-    display: none;
 }
 
 .carouselContainer {
@@ -142,106 +139,17 @@ body {
 
 .carouselContainer img {
     opacity: 0;
-    padding-right: 100px;
     width: 500px;
-  } 
-
-.picTopMargin{
-    margin-top: 250px;
-}
-
-.picBottomMargin{
-    margin-bottom: 250px;
-}
-
-.pic1 {
-    z-index: 0;
 } 
 
-.pic2 {
+.carouselContainer .imageWrapper:nth-child(even) {
     z-index: 0;
+    padding-right: 100px;
+    padding-top: 250px;
 }
 
-.pic3 {
-    z-index: 2;
-}
-
-.pic4 {
+.carouselContainer .imageWrapper:nth-child(odd) {
     z-index: 0;
-}
-
-.pic5 {
-    z-index: 2;
-}
-
-.pic6 {
-    z-index: 0;
-}
-
-.pic7 {
-    z-index: 2;
-}
-
-.pic8 {
-    z-index: 0;
-}
-
-.pic9 {
-    z-index: 0;
-}
-
-.pic10 {
-    z-index: 2;
-}
-
-.pic11 {
-    z-index: 0;
-}
-
-.pic11 {
-    z-index: 0;
-}
-
-.pic12 {
-    z-index: 2;
-}
-
-.pic13 {
-    z-index: 0;
-}
-
-.pic14 {
-    z-index: 2;
-}
-
-.pic15 {
-    z-index: 0;
-}
-
-.pic16 {
-    z-index: 2;
-}
-
-.pic17 {
-    z-index: 0;
-}
-
-.pic18 {
-    z-index: 2;
-}
-
-.pic19 {
-    z-index: 0;
-}
-
-.pic20 {
-    z-index: 2;
-}
-
-.pic21 {
-    z-index: 0;
-}
-
-.pic22 {
-    z-index: 2;
+    padding-right: 100px;
+    padding-bottom: 250px;
 }
