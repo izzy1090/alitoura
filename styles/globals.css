@@ -98,6 +98,10 @@ body {
     background-color: #F1F1EF;
 }
 
+.pageContent{
+    padding-top: 45px;
+}
+
 .logoContainer {
     position: fixed;
     top: 50%;
@@ -109,7 +113,6 @@ body {
 
 .logo {
     height: fit-content;
-    
 }
 
 .slideshow {
@@ -135,6 +138,8 @@ body {
     max-height: 100%;
     padding-top: 70px;
     padding: 50px;
+    border: #0D0D0E;
+    border-style: dashed;
 }
 
 .carouselContainer img {
