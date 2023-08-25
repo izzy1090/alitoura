@@ -231,4 +231,11 @@ body {
     .logo{
         width: 370px;
     }
+
+    .carouselContainer img {
+      display: inline-block;
+      opacity: 0;
+      width: 400px;
+    } 
+
   }
