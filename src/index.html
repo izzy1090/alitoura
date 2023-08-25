@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/globals.css">
     <link rel="stylesheet" href="../styles/locomotive-scroll.css">
     <link rel="stylesheet" href="../lightbox2/css/lightbox.css"/>
@@ -257,5 +258,19 @@
       tl2.play().finished.then(() => {  })
     })
 
+  </script>
+  <script>
+    
+    document.addEventListener("DOMContentLoaded", function(){
+      const isMobile = window.matchMedia("(max-width: 844px)").matches
+
+      lightbox.option({
+        disableScrolling: true,
+        showImageNumberLabel: false,
+        alwaysShowNavOnTouchDevices: true, 
+        wrapAround: true, 
+        positionFromTop: 150,
+      })
+    })
   </script>
 </html>

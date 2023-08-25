@@ -3,6 +3,10 @@
     src: url(../fonts/helveticaneue.ttf);
 }
 
+body.lightbox-open {
+    overflow: hidden;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -136,16 +140,15 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    /* border: #0D0D0E;
-    border-style: dashed; */
     overflow: hidden;
-    padding: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
 .carouselContainer img {
     display: inline-block;
     opacity: 0;
-    width: 500px;
+    width: 600px;
 } 
 
 @-webkit-keyframes hvr-bob {
@@ -223,3 +226,9 @@ body {
     padding-right: 100px;
     padding-bottom: 350px;
 }
+
+@media only screen and (min-width: 390px) and (max-width: 844px) {
+    .logo{
+        width: 370px;
+    }
+  }
