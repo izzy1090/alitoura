@@ -3,6 +3,10 @@
     src: url(../fonts/helveticaneue.ttf);
 }
 
+body.lightbox-open {
+    overflow: hidden;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -98,6 +102,10 @@ body {
     background-color: #F1F1EF;
 }
 
+.pageContent{
+    padding-top: 45px;
+}
+
 .logoContainer {
     position: fixed;
     top: 50%;
@@ -108,8 +116,7 @@ body {
 }
 
 .logo {
-    height: fit-content;
-    
+    height: fit-content; 
 }
 
 .slideshow {
@@ -128,28 +135,100 @@ body {
 }
 
 .carouselContainer {
+    height: 100vh;
     display: flex; 
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    max-height: 100%;
-    padding-top: 70px;
-    padding: 50px;
+    overflow: hidden;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
 .carouselContainer img {
+    display: inline-block;
     opacity: 0;
-    width: 500px;
+    width: 600px;
 } 
+
+@-webkit-keyframes hvr-bob {
+    0% {
+      -webkit-transform: translateY(-8px);
+      transform: translateY(-8px);
+    }
+    50% {
+      -webkit-transform: translateY(-4px);
+      transform: translateY(-4px);
+    }
+    100% {
+      -webkit-transform: translateY(-8px);
+      transform: translateY(-8px);
+    }
+  }
+  @keyframes hvr-bob {
+    0% {
+      -webkit-transform: translateY(-8px);
+      transform: translateY(-8px);
+    }
+    50% {
+      -webkit-transform: translateY(-4px);
+      transform: translateY(-4px);
+    }
+    100% {
+      -webkit-transform: translateY(-8px);
+      transform: translateY(-8px);
+    }
+  }
+  @-webkit-keyframes hvr-bob-float {
+    100% {
+      -webkit-transform: translateY(-8px);
+      transform: translateY(-8px);
+    }
+  }
+  @keyframes hvr-bob-float {
+    100% {
+      -webkit-transform: translateY(-8px);
+      transform: translateY(-8px);
+    }
+  }
+  .hvr-bob {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  }
+  .hvr-bob:hover, .hvr-bob:focus, .hvr-bob:active {
+    -webkit-animation-name: hvr-bob-float, hvr-bob;
+    animation-name: hvr-bob-float, hvr-bob;
+    -webkit-animation-duration: .3s, 1.5s;
+    animation-duration: .3s, 1.5s;
+    -webkit-animation-delay: 0s, .3s;
+    animation-delay: 0s, .3s;
+    -webkit-animation-timing-function: ease-out, ease-in-out;
+    animation-timing-function: ease-out, ease-in-out;
+    -webkit-animation-iteration-count: 1, infinite;
+    animation-iteration-count: 1, infinite;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-direction: normal, alternate;
+    animation-direction: normal, alternate;
+  }
 
 .carouselContainer .imageWrapper:nth-child(even) {
     z-index: 0;
     padding-right: 100px;
-    padding-top: 250px;
+    padding-top: 350px;
 }
 
 .carouselContainer .imageWrapper:nth-child(odd) {
     z-index: 0;
     padding-right: 100px;
-    padding-bottom: 250px;
+    padding-bottom: 350px;
 }
+
+@media only screen and (min-width: 390px) and (max-width: 844px) {
+    .logo{
+        width: 370px;
+    }
+  }
