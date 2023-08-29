@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/globals.css">
+    <link rel="stylesheet" href="../styles/about.css">
+  </head>
+  <body>
+    <div class="aboutPage">
+        <div class="header">
+          <div class="headerContainer">
+            <div class="navMenu">
+              <a class="aboutBackButton" onClick="linkAnimation(`../src/index.html`)">Back</a>
+            </div>
+            <div class="toggleButton" onClick="toggleLightDark()"></div>
+          </div>
+        </div>
+        <div class="aboutContainer">
+          <div class="aboutCopy">
+            <div style="padding: 5px; padding-bottom:50px; opacity: 0" id="siteBio">
+              Alitoura is a black and white study by Matthew William Taylor and Jason Sutherland Hsu.
+            </div>
+            <div class="aboutWrapper" id="photography">
+              <div >Photography</div><div>Jason Sutherland Hsu, Matthew William Taylor</div>
+            </div>
+            <div class="aboutWrapper" id="subjects">
+              <div>Subjects</div><div>Katherine Monogue-Rines, Abby Diedrich, Emily Parker</div>
+            </div>
+            <div class="aboutWrapper" id="website">
+              <div>Website</div><div>Matthew William Taylor, Michael Isabella and Newlywed</div>
+            </div>
+            <div class="aboutWrapper" id="productionAssistant">
+              <div>Production Assistant</div><div>Joshua Meneley</div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../scripts/simple-lightbox.jquery.min.js"></script>
+    <script src="../scripts/anime.min.js"></script>
+    <script src="../scripts/locomotive-scroll.min.js"></script>
+  </body>
+  <script>
+    
+    function toggleLightDark() {
+        var el1 = document.body;
+        el1.classList.toggle("bodyDarkMode");
+        var el2 = document.getElementsByClassName('toggleButton')[0];
+        el2.classList.toggle("buttonDarkMode");
+        var el3 = document.getElementsByClassName('logo')[0]; //light mode
+        el3.classList.toggle("logoDarkMode");
+        var el4 = document.getElementsByClassName('logo')[1]; //dark mode
+        el4.classList.toggle("logoDarkMode");
+        var el5 = document.getElementsByClassName('navMenu')[0];
+        el5.classList.toggle("headerDarkMode");
+        var el6 = document.getElementsByClassName('logoMask')[0];
+        el6.classList.toggle('logoMaskDarkMode')
+    }
+
+    // Logo animation timeline
+    const tl1 = anime.timeline({
+      easing: 'easeOutExpo',
+      duration: 500
+    });
+
+    tl1.add({
+      targets: '.aboutBackButton',
+      opacity: 1, 
+      delay: 800
+    })      
+    .add({
+      targets: '.toggleButton', 
+      opacity: 1
+    })
+    .add({
+      targets: '#siteBio',
+      opacity: 1
+    })
+    .add({
+      targets: '#photography', 
+      opacity: 1
+    })
+    .add({
+      targets: '#subjects', 
+      opacity: 1
+    })
+    .add({
+      targets: '#website', 
+      opacity: 1
+    })
+    .add({
+      targets: '#productionAssistant',
+      opacity: 1
+    })
+
+    // Where all the action happens!
+    tl1.play().finished.then(() => {})
+
+  </script>
+  <script>
+    function linkAnimation (destination) {
+      anime({
+        targets: ['.header', '.aboutCopy'],
+        opacity: 0, 
+        translateY: [0,5],
+        duration: 500, 
+        complete: function (){
+          window.location.href = destination;
+        }
+      })
+    }
+  </script>
+</html>

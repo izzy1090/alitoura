@@ -1,0 +1,23 @@
+.aboutPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.aboutContainer {
+    font-weight: 400;
+    font-size: 1.5em;
+}
+
+.aboutBackButton {
+    cursor: pointer;
+}
+
+.aboutWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px;
+    opacity: 0;
+}
