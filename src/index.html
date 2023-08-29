@@ -217,60 +217,60 @@
           easing: 'easeInOutQuad'
       });
     }
+    window.addEventListener('load', function(){
+      // Logo animation timeline
+      const tl1 = anime.timeline({
+        easing: 'easeOutExpo',
+      });
 
-    // Logo animation timeline
-    const tl1 = anime.timeline({
-      easing: 'easeOutExpo',
-    });
+      tl1
+      .add({
+        begin: () => {
+          logoAnimation();
+        }
+      })      
+      .add({
+          complete: fadePicsAndGrowLogo,
+      })
 
-    tl1
-    .add({
-      begin: () => {
-        logoAnimation();
-      }
-    })      
-    .add({
-        complete: fadePicsAndGrowLogo,
-    })
+      // About, print, toggle button animation timeline
+      var tl2 = anime.timeline({
+        easing: 'easeOutExpo',
+        duration: 500,
+        
+      })
 
-    // About, print, toggle button animation timeline
-    var tl2 = anime.timeline({
-      easing: 'easeOutExpo',
-      duration: 500,
-      
-    })
+      tl2.add({
+        targets: ['.aboutButton'],
+          opacity: 0, 
+          delay: 2000
+      })
+      .add({
+        targets: ['.aboutButton'],
+        opacity: 1,
+      })
+      .add({
+        targets: ['.printButton'],
+        opacity: 0,
+      })
+      .add({
+        targets: ['.printButton'],
+        opacity: 1,
+      })
+      .add({
+        targets: ['.toggleButton'],
+        opacity: 0,
+      })
+      .add({
+        targets: ['.toggleButton'],
+        opacity: 1,
+      })
 
-    tl2.add({
-      targets: ['.aboutButton'],
-        opacity: 0, 
-        delay: 2000
-    })
-    .add({
-      targets: ['.aboutButton'],
-      opacity: 1,
-    })
-    .add({
-      targets: ['.printButton'],
-      opacity: 0,
-    })
-    .add({
-      targets: ['.printButton'],
-      opacity: 1,
-    })
-    .add({
-      targets: ['.toggleButton'],
-      opacity: 0,
-    })
-    .add({
-      targets: ['.toggleButton'],
-      opacity: 1,
-    })
-
-    // Where all the action happens!
-    tl1.play().finished.then(() => {
-      tl2.play().finished.then(() => {  })
-    })
-
+      // Where all the action happens!
+      tl1.play().finished.then(() => {
+        tl2.play().finished.then(() => {  })
+      })
+  })
   </script>
   <script>
     function linkAnimation (destination) {
