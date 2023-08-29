@@ -27,7 +27,7 @@ body {
 
 .header {
     padding: 5px;
-    font-size: .8em;
+    font-size: 1em;
     font-weight: 400;
     top: 0;
     right: 0;
@@ -91,6 +91,15 @@ body {
     border-radius: 50%;
     display: inline-block;
     opacity: 0;
+    cursor: pointer;
+}
+
+.printButton {
+    cursor: pointer;
+}
+
+.aboutButton {
+    cursor: pointer;
 }
 
 .buttonDarkMode {
@@ -180,7 +189,7 @@ body {
 
 @media only screen and (min-width: 390px) and (max-width: 844px) {
     .navMenu {
-      margin: 5px;
+        margin: 5px;
     }
 
     .logo{
@@ -188,37 +197,36 @@ body {
     }
 
     .carouselContainer {
-      height: 100vh;
-      display: flex; 
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-      overflow: hidden;
-      padding: 0;
+        height: 100vh;
+        display: flex; 
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        overflow: hidden;
+        padding: 0;
     }
 
     .carouselContainer img {
-      display: inline-block;
-      opacity: 0;
-      width: 500px;
-      padding: 0px;
+        display: inline-block;
+        opacity: 0;
+        width: 500px;
+        padding: 0px;
     } 
-    
+
     .carouselContainer .imageWrapper:nth-child(even) {
-      z-index: 0;
-      padding-right: 100px;
-      padding-bottom: 0px;
-      padding-left: 11px;
-      margin: 0px;
-    }
-  
-    .carouselContainer .imageWrapper:nth-child(odd) {
-      z-index: 0;
-      padding-right: 100px;
-      padding-top: 250px;
-      padding-left: 0px;
-      margin: 0px;
-      margin-left: -15px;
+        z-index: 0;
+        padding-right: 100px;
+        padding-bottom: 0px;
+        padding-left: 11px;
+        margin: 0px;
     }
 
-  }
+    .carouselContainer .imageWrapper:nth-child(odd) {
+        z-index: 0;
+        padding-right: 100px;
+        padding-top: 250px;
+        padding-left: 0px;
+        margin: 0px;
+        margin-left: -15px;
+    }
+}
