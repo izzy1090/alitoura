@@ -21,10 +21,6 @@ body {
     cursor: pointer;
 }
 
-.buttonDarkMode {
-    background-color: #F1F1EF;
-}
-
 .pageContent{
     padding-top: 45px;
 }

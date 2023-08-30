@@ -13,7 +13,6 @@
             <div class="navMenu">
               <a class="aboutBackButton" onClick="linkAnimation(`../src/index.html`)">Back</a>
             </div>
-            <div class="toggleButton" onClick="toggleLightDark()"></div>
           </div>
         </div>
         <div class="aboutContainer">
@@ -42,21 +41,6 @@
     <script src="../scripts/locomotive-scroll.min.js"></script>
   </body>
   <script>
-    
-    function toggleLightDark() {
-        var el1 = document.body;
-        el1.classList.toggle("bodyDarkMode");
-        var el2 = document.getElementsByClassName('toggleButton')[0];
-        el2.classList.toggle("buttonDarkMode");
-        var el3 = document.getElementsByClassName('logo')[0]; //light mode
-        el3.classList.toggle("logoDarkMode");
-        var el4 = document.getElementsByClassName('logo')[1]; //dark mode
-        el4.classList.toggle("logoDarkMode");
-        var el5 = document.getElementsByClassName('navMenu')[0];
-        el5.classList.toggle("headerDarkMode");
-        var el6 = document.getElementsByClassName('logoMask')[0];
-        el6.classList.toggle('logoMaskDarkMode')
-    }
 
     // Logo animation timeline
     const tl1 = anime.timeline({

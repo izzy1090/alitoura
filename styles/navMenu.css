@@ -45,7 +45,7 @@
     width: 100%;
 }
 
-.headerDarkMode{
+.headerDarkMode {
     background-color: #0D0D0E;
 }
 
@@ -80,6 +80,10 @@
     display: inline-block;
     opacity: 0;
     cursor: pointer;
+}
+
+.toggleButton.buttonDarkMode {
+    background-color: #F1F1EF;
 }
 
 /* Smallest screens possible */
