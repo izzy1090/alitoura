@@ -45,6 +45,10 @@
     width: 100%;
 }
 
+.headerDarkMode{
+    background-color: #0D0D0E;
+}
+
 .headerDarkMode a::after {
     content: '';
     display: block;

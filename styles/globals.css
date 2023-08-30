@@ -195,6 +195,7 @@ body {
         width: 500px;
         padding-right: 50px;
     }
+
     .carouselContainer .imageWrapper:nth-child(1){
         padding-top: 250px;
         margin-left: -100px;
@@ -215,6 +216,11 @@ body {
         width: 500px;
         padding-right: 50px;
     }
+
+    .carouselContainer .imageWrapper:nth-child(even){
+        padding-bottom: 150px;
+    }
+
     .carouselContainer .imageWrapper:nth-child(1){
         padding-top: 250px;
         margin-left: -100px;
