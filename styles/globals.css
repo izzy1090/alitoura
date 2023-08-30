@@ -64,8 +64,8 @@ body {
     align-items: center;
     justify-content: space-between;
     overflow: hidden;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .carouselContainer img {
@@ -105,101 +105,18 @@ body {
     padding-right: 100px;
     padding-bottom: 350px;
 }
-
-/* 
-@media only screen and (max-height: 390px) and (max-width: 844px) {
-
-
-    .carouselContainer {
-        height: 100vh;
-        display: flex; 
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        overflow: hidden;
-        padding: 0;
-    }
-
-    .carouselContainer img {
-        display: inline-block;
-        opacity: 0;
-        width: 500px;
-        padding: 0px;
-    } 
-
-    .carouselContainer .imageWrapper:nth-child(even) {
-        z-index: 0;
-        padding-right: 100px;
-        padding-bottom: 0px;
-        padding-left: 10px;
-        margin: 0px;
-    }
-
-    .carouselContainer .imageWrapper:nth-child(odd) {
-        z-index: 0;
-        padding-right: 100px;
-        padding-top: 250px;
-        padding-left: 0px;
-        margin: 0px;
-    }
-    .carouselContainer .imageWrapper:nth-child(1){
-        margin-left: -5px;
-    }
-    .carouselContainer .imageWrapper:nth-child(22){
-        margin-right: -5px;
-    }
+.carouselContainer .imageWrapper:nth-child(22){
+    margin-left: 400px;
 }
 
-@media (max-height: 400px){
-
-    .carouselContainer {
-        height: 100vh;
-        display: flex; 
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        overflow: hidden;
-        padding: 0;
-    }
-
-    .carouselContainer img {
-        display: inline-block;
-        opacity: 0;
-        width: 500px;
-        padding: 0px;
-    } 
-
-    .carouselContainer .imageWrapper:nth-child(even) {
-        z-index: 0;
-        padding-right: 100px;
-        padding-bottom: 0px;
-        padding-left: 10px;
-        margin: 0px;
-    }
-
-    .carouselContainer .imageWrapper:nth-child(odd) {
-        z-index: 0;
-        padding-right: 100px;
-        padding-top: 250px;
-        padding-left: 0px;
-        margin: 0px;
-    }
-    .carouselContainer .imageWrapper:nth-child(1){
-        margin-left: -5px;
-    }
-    .carouselContainer .imageWrapper:nth-child(22){
-        margin-right: -5px;
-    }
-}
-*/
-
-/*  */
+/* random breakpoint */
 @media (min-width: 700px) and (max-width: 800px) {
     .logo{
         width: 700px;
     }
 }
 
+/* random breakpoint */
 @media (max-width: 699px) {
     .logo{
         width: 500px;
@@ -211,12 +128,40 @@ body {
     .logo{
         width: 250px;
     }
+
+    .carouselContainer img{
+        width: 500px;
+        padding-right: 50px;
+    }
+    .carouselContainer .imageWrapper:nth-child(1){
+        padding-top: 250px;
+        margin-left: -100px;
+    }
+
+    .carouselContainer .imageWrapper:nth-child(22){
+        padding-top: 200px;
+        padding-right: 0px;
+    }
 }
 
 /* Samsung Galaxy S8+ */
 @media (min-width: 300px) and (max-width: 360px) and (min-height: 654px) and (max-height: 799px){
     .logo{
         width: 330px;
+    }
+
+    .carouselContainer img{
+        width: 500px;
+        padding-right: 50px;
+    }
+    .carouselContainer .imageWrapper:nth-child(1){
+        padding-top: 250px;
+        margin-left: -100px;
+    }
+
+    .carouselContainer .imageWrapper:nth-child(22){
+        padding-top: 200px;
+        padding-right: 0px;
     }
 }
 
@@ -225,12 +170,39 @@ body {
     .logo{
         width: 380px;
     }
+    .carouselContainer img{
+        width: 500px;
+        padding-right: 50px;
+    }
+    .carouselContainer .imageWrapper:nth-child(1){
+        padding-top: 250px;
+        margin-left: -100px;
+    }
+
+    .carouselContainer .imageWrapper:nth-child(22){
+        padding-top: 200px;
+        padding-right: 0px;
+    }
 }
 
 /* Smaller iPhone screens */
 @media (min-width: 380px) and (max-width: 393px) and (min-height: 700px) and (max-height: 851px){
     .logo{
         width: 370px;
+    }
+
+    .carouselContainer img{
+        width: 500px;
+        padding-right: 50px;
+    }
+    .carouselContainer .imageWrapper:nth-child(1){
+        padding-top: 250px;
+        margin-left: -100px;
+    }
+
+    .carouselContainer .imageWrapper:nth-child(22){
+        padding-top: 200px;
+        padding-right: 0px;
     }
 }
 
@@ -239,18 +211,60 @@ body {
     .logo{
         width: 350px;
     }
+    .carouselContainer img{
+        width: 500px;
+        padding-right: 50px;
+    }
+    .carouselContainer .imageWrapper:nth-child(1){
+        padding-top: 250px;
+        margin-left: -100px;
+    }
+
+    .carouselContainer .imageWrapper:nth-child(22){
+        padding-top: 200px;
+        padding-right: 0px;
+    }
 }
 
 /* iPhone 12 */
 @media (min-width: 376px) and (max-width: 390px) and (min-height: 668px) and (max-height: 895px){
+
     .logo{
         width: 370px;
     }
+    
+    .carouselContainer img{
+        width: 500px;
+        padding-right: 50px;
+    }
+    .carouselContainer .imageWrapper:nth-child(1){
+        padding-top: 250px;
+        margin-left: -100px;
+    }
+
+    .carouselContainer .imageWrapper:nth-child(22){
+        padding-top: 200px;
+    }
+    
 }
 
 /* iPhone XR */
 @media (min-width: 391px) and (max-width:500px) and (min-height: 852px) and (max-height: 900px ){
     .logo{
         width: 370px;
+    }
+
+    .carouselContainer img{
+        width: 500px;
+        padding-right: 50px;
+    }
+    .carouselContainer .imageWrapper:nth-child(1){
+        padding-top: 250px;
+        margin-left: -100px;
+    }
+
+    .carouselContainer .imageWrapper:nth-child(22){
+        padding-top: 200px;
+        padding-right: 0px;
     }
 }
