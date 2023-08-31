@@ -33,6 +33,51 @@
     padding-bottom:50px; 
 }
 
+/* for when a user resizes the window's height to be the minimum size */
+@media (max-height: 400px){
+    .aboutContainer{
+        font-size: 1em;
+    }
+}
+
+@media (min-width: 500px) and (min-height: 850px){
+    
+}
+
+/* For when a user resizes their internet browser in Desktop mode */
+@media (max-width: 810px) {
+    .aboutContainer {
+        padding: 25px;
+        font-size: 1.25em;
+        margin-bottom: 10px;
+    }
+    
+    .aboutBackButton {
+        cursor: pointer;
+    }
+    
+    .aboutWrapper {
+        display: flex;
+        flex-direction:column;
+        align-items: flex-start;
+        opacity: 0;
+    }
+
+    #siteBio{
+        padding-bottom: 40px;
+    }
+    
+    #photography span, #subjects span, #website span, #productionAssistant span {
+        padding-bottom: 15px;
+        font-weight: 100;
+    }
+
+    #photography div, #subjects div, #website div, #productionAssistant div {
+        padding-bottom: 8px;
+        font-weight: 100;
+    } 
+}
+
 /* Smallest screens possible */
 @media (min-width: 200px) and (max-width: 299px) and (min-height: 500px) and (max-height: 653px){
     .aboutContainer {
