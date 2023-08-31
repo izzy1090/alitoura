@@ -13,6 +13,7 @@
             <div class="navMenu">
               <a class="aboutBackButton" onClick="linkAnimation(`../src/index.html`)">Back</a>
             </div>
+            <div class="toggleButton" onClick="toggleLightDark()"></div>
           </div>
         </div>
         <div class="aboutContainer">
@@ -39,8 +40,20 @@
     <script src="../scripts/simple-lightbox.jquery.min.js"></script>
     <script src="../scripts/anime.min.js"></script>
     <script src="../scripts/locomotive-scroll.min.js"></script>
+    <script src="../scripts/LightDarkMode.js"></script>
   </body>
   <script>
+
+  function toggleLightDark() {
+      const el1 = document.body;
+      el1.classList.toggle("bodyDarkMode");
+      const el2 = document.getElementsByClassName('toggleButton')[0];
+      el2.classList.toggle("buttonDarkMode");
+      const el5 = document.getElementsByClassName('header')[0];
+      el5.classList.toggle('headerDarkMode');
+      const el6 = document.getElementsByClassName('logoMask')[0];
+      el6.classList.toggle('logoMaskDarkMode');
+  }
 
     // Logo animation timeline
     const tl1 = anime.timeline({
@@ -49,33 +62,20 @@
     });
 
     tl1.add({
-      targets: '.aboutBackButton',
+      targets: ['.aboutBackButton', '.toggleButton'],
       opacity: 1, 
+      translateY: [5,0],
       delay: 800
     })      
     .add({
-      targets: '.toggleButton', 
-      opacity: 1
-    })
-    .add({
       targets: '#siteBio',
-      opacity: 1
+      opacity: 1,
+      translateY: [5,0]
     })
     .add({
-      targets: '#photography', 
-      opacity: 1
-    })
-    .add({
-      targets: '#subjects', 
-      opacity: 1
-    })
-    .add({
-      targets: '#website', 
-      opacity: 1
-    })
-    .add({
-      targets: '#productionAssistant',
-      opacity: 1
+      targets: ['#photography', '#subjects', '#website', '#productionAssistant'], 
+      opacity: 1,
+      translateY: [5,0]
     })
 
     // Where all the action happens!
