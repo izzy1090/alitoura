@@ -54,6 +54,7 @@ body {
 }
 
 .carouselContainer {
+    margin-top: 20px;
     height: 100vh;
     display: flex; 
     flex-direction: row;
@@ -62,6 +63,7 @@ body {
     overflow: hidden;
     padding-left: 10px;
     padding-right: 10px;
+    overflow-x: scroll;
 }
 
 .carouselContainer img {
