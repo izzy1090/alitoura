@@ -11,7 +11,15 @@ body {
     font-family: HNR;
     transition: color 0.2s ease-in-out;
     transition: background-color 0.2s ease-in-out;
+    /* overscroll-behavior: none;
+    overflow: hidden; */
 }
+
+@media not all and (min-resolution:.001dpcm) { @supports (-webkit-appearance:none) {
+    body {
+        overflow-x: hidden;
+    }
+}}
 
 .printButton {
     cursor: pointer;
@@ -63,7 +71,7 @@ body {
     overflow: hidden;
     padding-left: 10px;
     padding-right: 10px;
-    overflow-x: scroll;
+    /* overflow-x: scroll; */
 }
 
 .carouselContainer img {
