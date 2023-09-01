@@ -114,6 +114,12 @@ body {
     }
 }}
 
+@media (max-height: 330px){
+    .logo{
+        width: 400px;
+    }
+}
+
 /* random breakpoint */
 @media (min-width: 700px) and (max-width: 800px) {
     .logo{
