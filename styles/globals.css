@@ -11,15 +11,8 @@ body {
     font-family: HNR;
     transition: color 0.2s ease-in-out;
     transition: background-color 0.2s ease-in-out;
-    /* overscroll-behavior: none;
-    overflow: hidden; */
+    overscroll-behavior: none;
 }
-
-@media not all and (min-resolution:.001dpcm) { @supports (-webkit-appearance:none) {
-    body {
-        overflow-x: hidden;
-    }
-}}
 
 .printButton {
     cursor: pointer;
@@ -71,7 +64,6 @@ body {
     overflow: hidden;
     padding-left: 10px;
     padding-right: 10px;
-    /* overflow-x: scroll; */
 }
 
 .carouselContainer img {
@@ -114,6 +106,13 @@ body {
 .carouselContainer .imageWrapper:nth-child(22){
     margin-left: 400px;
 }
+
+/* Disable scrolling on Safari */
+@media not all and (min-resolution:.001dpcm) { @supports (-webkit-appearance:none) {
+    body {
+        overflow-x: hidden;
+    }
+}}
 
 /* random breakpoint */
 @media (min-width: 700px) and (max-width: 800px) {

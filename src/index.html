@@ -148,6 +148,7 @@
     <script src="../scripts/simple-lightbox.jquery.min.js"></script>
     <script src="../scripts/anime.min.js"></script>
     <script src="../scripts/locomotive-scroll.min.js"></script>
+    <script src="../scripts/logoAnimation.js" async></script>
   </body>
   <script>
     var scroll = new LocomotiveScroll({
@@ -163,7 +164,8 @@
         scrollFromAnywhere: true,
       }
     });
-
+  </script>
+  <script>
     $('.carouselContainer a').simpleLightbox({ 
       showCounter: false,
       close: false,
@@ -171,7 +173,8 @@
       loop: true,
       fadeSpeed: 150
     });
-
+  </script>
+  <script>
     function toggleLightDark() {
         var el1 = document.body;
         el1.classList.toggle("bodyDarkMode");
@@ -184,92 +187,6 @@
         var el6 = document.getElementsByClassName('logoMask')[0];
         el6.classList.toggle('logoMaskDarkMode');
     }
-
-    function logoAnimation(){
-      const logoMask = document.querySelector('.logoMask');
-
-      anime({
-        // Target the logo mask before moving the mask down to create a swipe in effect
-        targets: logoMask,
-        translateY: [0, '100%'],
-        duration: 1000,
-        easing: 'easeInOutQuad',
-        // Then complete the animation by removing the logo mask from the DOM
-        complete: () => {
-          logoMask.parentElement.removeChild(logoMask);
-        }
-      })
-    }
-
-    function fadePicsAndGrowLogo(){
-      anime({
-          targets: '.carouselContainer img', 
-          opacity: 1,
-          duration: 800,
-          easing: 'easeInOutQuad'
-      });
-
-      anime({
-          targets: '.logo',
-          scale: 1.02,
-          duration: 1200,
-          easing: 'easeInOutQuad'
-      });
-    }
-    window.addEventListener('load', function(){
-      // Logo animation timeline
-      const tl1 = anime.timeline({
-        easing: 'easeOutExpo',
-      });
-
-      tl1
-      .add({
-        begin: () => {
-          logoAnimation();
-        }
-      })      
-      .add({
-          complete: fadePicsAndGrowLogo,
-      })
-
-      // About, print, toggle button animation timeline
-      var tl2 = anime.timeline({
-        easing: 'easeOutExpo',
-        duration: 500,
-        
-      })
-
-      tl2.add({
-        targets: ['.aboutButton'],
-          opacity: 0, 
-          delay: 2000
-      })
-      .add({
-        targets: ['.aboutButton'],
-        opacity: 1,
-      })
-      .add({
-        targets: ['.printButton'],
-        opacity: 0,
-      })
-      .add({
-        targets: ['.printButton'],
-        opacity: 1,
-      })
-      .add({
-        targets: ['.toggleButton'],
-        opacity: 0,
-      })
-      .add({
-        targets: ['.toggleButton'],
-        opacity: 1,
-      })
-
-      // Where all the action happens!
-      tl1.play().finished.then(() => {
-        tl2.play().finished.then(() => {  })
-      })
-  })
   </script>
   <script>
     function linkAnimation (destination) {
