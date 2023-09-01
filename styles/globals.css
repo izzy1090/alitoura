@@ -46,7 +46,6 @@ body {
 
 .logoDarkMode {
     display: none;
-    /* color: #F1F1EF; */
 }
 
 .logoMask {
@@ -115,6 +114,12 @@ body {
         overflow-x: hidden;
     }
 }}
+
+@media (max-width: 550px) and (max-height: 850px){
+    .logoContainer{
+        width: 70%;
+    }
+}
 
 /* Smallest screens possible */
 @media (min-width: 200px) and (max-width: 299px) and (min-height: 500px) and (max-height: 653px){
