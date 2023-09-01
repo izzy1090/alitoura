@@ -124,7 +124,7 @@ body {
 /* random breakpoint */
 @media (max-width: 699px) {
     .logo{
-        width: 500px;
+        width: 400px;
     }
 }
 
