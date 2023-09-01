@@ -44,10 +44,6 @@ function fadePicsAndGrowLogo(){
         complete: fadePicsAndGrowLogo,
     })
 
-    // window.addEventListener('load', function (){
-    //   const 
-    // })
-
     // About, print, toggle button animation timeline
     var tl2 = anime.timeline({
       easing: 'easeOutExpo',
