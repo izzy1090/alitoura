@@ -45,8 +45,8 @@ body {
 }
 
 .logoDarkMode {
-    /* display: none; */
-    color: #F1F1EF;
+    display: none;
+    /* color: #F1F1EF; */
 }
 
 .logoMask {
