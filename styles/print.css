@@ -1,0 +1,81 @@
+.printPageContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.printContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.bookContainer{
+    padding: 50px;
+    opacity: 0;
+}
+
+.book {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 120px;
+}
+
+.book img{
+    width: 200px;
+    filter: drop-shadow(0px 4px 2px grey);
+}
+
+.copyContainer{
+    opacity: 0;
+}
+
+.printDimensions{
+    font-size: 1.2em;
+}
+
+.purchaseButton {
+    width: 170px;
+    margin-top: 15px;
+    border-radius: 2rem;
+    border: 1px solid;
+    padding: 9px;
+    font-size: 1.2em;
+    font-weight: lighter;
+    cursor: pointer;
+    background-color: #F1F1EF;
+    color: #0D0D0E;
+}
+
+.purchaseButton:hover{
+    background-color: #0D0D0E;
+    color: #F1F1EF;
+}
+
+.purchaseButton:active{
+    transform: translateY(1px);
+    background-color: #F1F1EF;
+    color: grey;
+}
+
+.purchaseButtonDarkMode {
+    background-color: #0D0D0E;
+    color: #F1F1EF;
+}
+
+.purchaseButtonDarkMode:hover{
+    background-color: #F1F1EF;
+    color: #0D0D0E;
+}
+
+.purchaseButtonDarkMode:active{
+    transform: translateY(1px);
+    background-color: #0D0D0E;
+    color: grey;
+}

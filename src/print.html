@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/globals.css">
+    <link rel="stylesheet" href="../styles/navMenu.css">
+    <link rel="stylesheet" href="../styles/print.css">
+  </head>
+  <body>
+    <div class="header">
+        <div class="headerContainer">
+            <div class="navMenu">
+                <a class="backButton" onClick="linkAnimation(`../src/index.html`)">Back</a>
+            </div>
+            <div class="toggleButton" onClick="toggleLightDark()"></div>
+        </div>
+    </div>
+    <div class="printPageContent">
+        <div class="printContainer">
+            <div class="bookContainer">
+                <div class="book">
+                    <img src="../images/13.jpg">
+                </div>
+            </div>
+            <div class="copyContainer">
+                <div class="printDimensions">
+                    A limited edition 5.5" x 8.5" zine designed and printed in California
+                </div>
+                <button class="purchaseButton">Purchase for $9</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../scripts/anime.min.js"></script>  
+    <script src="../scripts/printPageIntroAnim.js"></script>
+  </body>
+  <script>
+    function toggleLightDark() {
+        const el1 = document.body;
+        el1.classList.toggle("bodyDarkMode");
+        const el2 = document.getElementsByClassName('toggleButton')[0];
+        el2.classList.toggle("buttonDarkMode");
+        const el3 = document.getElementsByClassName('purchaseButton')[0];
+        el3.classList.toggle("purchaseButtonDarkMode")
+    }
+  </script>
+  <script>
+    function linkAnimation (destination) {
+      anime({
+        targets: ['.header', '.printContainer'],
+        opacity: 0, 
+        translateY: [0,5],
+        duration: 500, 
+        complete: function (){
+          window.location.href = destination;
+        }
+      })
+    }
+  </script>
+</html>

@@ -7,78 +7,48 @@
     <link rel="stylesheet" href="../styles/navMenu.css">
   </head>
   <body>
-    <div class="aboutPage">
-        <div class="header">
-          <div class="headerContainer">
-            <div class="navMenu">
-              <a class="aboutBackButton" onClick="linkAnimation(`../src/index.html`)">Back</a>
-            </div>
-            <div class="toggleButton" onClick="toggleLightDark()"></div>
+    <div class="header">
+      <div class="headerContainer">
+        <div class="navMenu">
+          <a class="backButton" onClick="linkAnimation(`../src/index.html`)">Back</a>
+        </div>
+        <div class="toggleButton" onClick="toggleLightDark()"></div>
+      </div>
+    </div>
+    <div class="aboutPageContent">
+      <div class="aboutContainer">
+        <div class="aboutCopy">
+          <div style="opacity: 0" id="siteBio">
+            Alitoura is a black and white study by Matthew William Taylor and Jason Sutherland Hsu.
+          </div>
+          <div class="aboutWrapper" id="photography">
+            <div >Photography</div><span>Jason Sutherland Hsu, Matthew William Taylor</span>
+          </div>
+          <div class="aboutWrapper" id="subjects">
+            <div>Subjects</div><span>Katherine Monogue-Rines, Abby Diedrich, Emily Parker</span>
+          </div>
+          <div class="aboutWrapper" id="website">
+            <div>Website</div><span>Matthew William Taylor, Michael Isabella and Newlywed</span>
+          </div>
+          <div class="aboutWrapper" id="productionAssistant">
+            <div>Production Assistant</div><span>Joshua Meneley</span>
           </div>
         </div>
-        <div class="aboutContainer">
-          <div class="aboutCopy">
-            <div style="opacity: 0" id="siteBio">
-              Alitoura is a black and white study by Matthew William Taylor and Jason Sutherland Hsu.
-            </div>
-            <div class="aboutWrapper" id="photography">
-              <div >Photography</div><span>Jason Sutherland Hsu, Matthew William Taylor</span>
-            </div>
-            <div class="aboutWrapper" id="subjects">
-              <div>Subjects</div><span>Katherine Monogue-Rines, Abby Diedrich, Emily Parker</span>
-            </div>
-            <div class="aboutWrapper" id="website">
-              <div>Website</div><span>Matthew William Taylor, Michael Isabella and Newlywed</span>
-            </div>
-            <div class="aboutWrapper" id="productionAssistant">
-              <div>Production Assistant</div><span>Joshua Meneley</span>
-            </div>
-          </div>
-        </div>
+      </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="../scripts/simple-lightbox.jquery.min.js"></script>
     <script src="../scripts/anime.min.js"></script>
     <script src="../scripts/locomotive-scroll.min.js"></script>
-    <script src="../scripts/LightDarkMode.js"></script>
+    <script src="../scripts/aboutPageIntroAnim.js"></script>
   </body>
   <script>
-
-  function toggleLightDark() {
-      const el1 = document.body;
-      el1.classList.toggle("bodyDarkMode");
-      const el2 = document.getElementsByClassName('toggleButton')[0];
-      el2.classList.toggle("buttonDarkMode");
-      const el6 = document.getElementsByClassName('logoMask')[0];
-      el6.classList.toggle('logoMaskDarkMode');
-  }
-
-    // Logo animation timeline
-    const tl1 = anime.timeline({
-      easing: 'easeOutExpo',
-      duration: 500
-    });
-
-    tl1.add({
-      targets: ['.aboutBackButton', '.toggleButton'],
-      opacity: 1, 
-      translateY: [5,0],
-      delay: 800
-    })      
-    .add({
-      targets: '#siteBio',
-      opacity: 1,
-      translateY: [5,0]
-    })
-    .add({
-      targets: ['#photography', '#subjects', '#website', '#productionAssistant'], 
-      opacity: 1,
-      translateY: [5,0]
-    })
-
-    // Where all the action happens!
-    tl1.play().finished.then(() => {})
-
+    function toggleLightDark() {
+        const el1 = document.body;
+        el1.classList.toggle("bodyDarkMode");
+        const el2 = document.getElementsByClassName('toggleButton')[0];
+        el2.classList.toggle("buttonDarkMode");
+    }
   </script>
   <script>
     function linkAnimation (destination) {
