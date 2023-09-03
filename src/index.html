@@ -162,25 +162,25 @@
     });
   </script>
   <script>
-  // if it's safari, set the fadeSpeed to be the below to prevent a slide transition bug
-  if (/^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
-    $('.carouselContainer a').simpleLightbox({ 
-      showCounter: false,
-      close: false,
-      scrollZoom: false,
-      loop: true,
-      fadeSpeed: 0,
-      animationSlide: false
-  });
-  // Otherwise set the options for the lightbox to be default
-  } else {
-    $('.carouselContainer a').simpleLightbox({ 
-      showCounter: false,
-      close: false,
-      scrollZoom: false,
-      loop: true,
+    // if it's safari, set the fadeSpeed to be the below to prevent a slide transition bug
+    if (/^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
+      $('.carouselContainer a').simpleLightbox({ 
+        showCounter: false,
+        close: false,
+        scrollZoom: false,
+        loop: true,
+        fadeSpeed: 0,
+        animationSlide: false
     });
-  }
+    // Otherwise set the options for the lightbox to be default
+    } else {
+      $('.carouselContainer a').simpleLightbox({ 
+        showCounter: false,
+        close: false,
+        scrollZoom: false,
+        loop: true,
+      });
+    }
   </script>
   <script>
     function toggleLightDark() {
