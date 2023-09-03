@@ -172,16 +172,16 @@
   </script>
   <script>
     function toggleLightDark() {
-        var el1 = document.body;
-        el1.classList.toggle("bodyDarkMode");
-        var el2 = document.getElementsByClassName('toggleButton')[0];
-        el2.classList.toggle("buttonDarkMode");
-        var el3 = document.getElementsByClassName('logo')[0]; //light mode
-        el3.classList.toggle("logoDarkMode");
-        var el4 = document.getElementsByClassName('logo')[1]; //dark mode
-        el4.classList.toggle("logoDarkMode");
-        var el6 = document.getElementsByClassName('logoMask')[0];
-        el6.classList.toggle('logoMaskDarkMode');
+      var el1 = document.body;
+      el1.classList.toggle("bodyDarkMode");
+      var el2 = document.getElementsByClassName('toggleButton')[0];
+      el2.classList.toggle("buttonDarkMode");
+      var el3 = document.getElementsByClassName('logo')[0]; //light mode
+      el3.classList.toggle("logoDarkMode");
+      var el4 = document.getElementsByClassName('logo')[1]; //dark mode
+      el4.classList.toggle("logoDarkMode");
+      var el6 = document.getElementsByClassName('logoMask')[0];
+      el6.classList.toggle('logoMaskDarkMode');
     }
   </script>
   <script>
@@ -200,27 +200,28 @@
   </script>
   <script>
     window.addEventListener('load', function (){
-      // Select the SVG container
+      // Select the empty SVG container
       var normalSvgContainer = document.getElementById('normalSvgContainer');
 
-      // Create an <object> element to load the SVG
+      // Create an empty object to fill it with the SVG 
       var normalSvgObject = document.createElement('object');
+      // Point the SVG's data to the SVG location
       normalSvgObject.data = '../images/normalLogo.svg'; // Replace with the path to your SVG file
+      // The type of SVG it should be formatted to
       normalSvgObject.type = 'image/svg+xml';
+      // Set the width and height to 100%
       normalSvgObject.style.width = '100%'; // Adjust the size as needed
       normalSvgObject.style.height = '100%';
-
-      // Append the <object> element to the container
+      // Then append the initialized object to the empty SVG container created earlier
       normalSvgContainer.appendChild(normalSvgObject);
       
+      // Repeat this whole process again for the inverted logo
       var invertedSvgContainer = document.getElementById('invertedSvgContainer')
-
       var invertedSvgObject = document.createElement('object')
       invertedSvgObject.data = '../images/invertedLogo.svg'; // Replace with the path to your SVG file
       invertedSvgObject.type = 'image/svg+xml';
       invertedSvgObject.style.width = '100%'; // Adjust the size as needed
       invertedSvgObject.style.height = '100%';
-
       invertedSvgContainer.appendChild(invertedSvgObject)
 
     })
