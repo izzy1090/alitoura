@@ -1,7 +1,7 @@
 // Logo animation timeline
 const tl1 = anime.timeline({
     easing: 'easeOutExpo',
-    duration: 500
+    duration: 700
 });
 
 tl1.add({
@@ -9,6 +9,11 @@ tl1.add({
     opacity: 1, 
     translateY: [5,0],
     delay: 800
+})
+.add({
+    targets: ['.bookContainer'],
+    opacity: 1, 
+    translateY: [5, 0]
 })
 .add({
     targets: '.copyContainer',

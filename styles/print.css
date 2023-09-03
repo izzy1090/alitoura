@@ -6,15 +6,30 @@
 }
 
 .printContainer {
-
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 .bookContainer{
-
+    padding: 50px;
+    opacity: 0;
 }
 
-.book{
+.book {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 120px;
+}
 
+.book img{
+    width: 200px;
+    filter: drop-shadow(0px 4px 2px grey);
 }
 
 .copyContainer{
@@ -26,6 +41,8 @@
 }
 
 .purchaseButton {
+    width: 170px;
+    margin-top: 15px;
     border-radius: 2rem;
     border: 1px solid;
     padding: 9px;
@@ -57,7 +74,7 @@
     color: #0D0D0E;
 }
 
-.purchaseButton:active{
+.purchaseButtonDarkMode:active{
     transform: translateY(1px);
     background-color: #0D0D0E;
     color: grey;
