@@ -40,45 +40,17 @@
     <script src="../scripts/simple-lightbox.jquery.min.js"></script>
     <script src="../scripts/anime.min.js"></script>
     <script src="../scripts/locomotive-scroll.min.js"></script>
-    <script src="../scripts/LightDarkMode.js"></script>
+    <script src="../scripts/aboutPageIntroAnim.js"></script>
   </body>
   <script>
-
-  function toggleLightDark() {
-      const el1 = document.body;
-      el1.classList.toggle("bodyDarkMode");
-      const el2 = document.getElementsByClassName('toggleButton')[0];
-      el2.classList.toggle("buttonDarkMode");
-      const el6 = document.getElementsByClassName('logoMask')[0];
-      el6.classList.toggle('logoMaskDarkMode');
-  }
-
-    // Logo animation timeline
-    const tl1 = anime.timeline({
-      easing: 'easeOutExpo',
-      duration: 500
-    });
-
-    tl1.add({
-      targets: ['.aboutBackButton', '.toggleButton'],
-      opacity: 1, 
-      translateY: [5,0],
-      delay: 800
-    })      
-    .add({
-      targets: '#siteBio',
-      opacity: 1,
-      translateY: [5,0]
-    })
-    .add({
-      targets: ['#photography', '#subjects', '#website', '#productionAssistant'], 
-      opacity: 1,
-      translateY: [5,0]
-    })
-
-    // Where all the action happens!
-    tl1.play().finished.then(() => {})
-
+    function toggleLightDark() {
+        const el1 = document.body;
+        el1.classList.toggle("bodyDarkMode");
+        const el2 = document.getElementsByClassName('toggleButton')[0];
+        el2.classList.toggle("buttonDarkMode");
+        const el6 = document.getElementsByClassName('logoMask')[0];
+        el6.classList.toggle('logoMaskDarkMode');
+    }
   </script>
   <script>
     function linkAnimation (destination) {
