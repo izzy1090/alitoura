@@ -185,6 +185,7 @@
     }
   </script>
   <script>
+    const pageContent = document.body;
     function linkAnimation (destination) {
       anime({
         targets: ['.header', '#normalSvgContainer', '#invertedSvgContainer', '.carouselContainer'],
@@ -193,6 +194,7 @@
         translateY: [0,5],
         duration: 500, 
         complete: function (){
+          pageContent.remove();
           window.location.href = destination;
         }
       })
