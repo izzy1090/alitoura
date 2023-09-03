@@ -1,0 +1,10 @@
+.printPageContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.printContainer {
+    opacity: 0;
+}

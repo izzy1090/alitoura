@@ -1,4 +1,4 @@
-.aboutPage {
+.aboutPageContent {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,11 +11,6 @@
     padding-right: 10%;
     font-weight: 400;
     font-size: 1.25em;
-    overflow: hidden;
-}
-
-.aboutBackButton {
-    cursor: pointer;
 }
 
 .aboutWrapper {

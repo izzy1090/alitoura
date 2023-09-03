@@ -7,34 +7,34 @@
     <link rel="stylesheet" href="../styles/navMenu.css">
   </head>
   <body>
-    <div class="aboutPage">
-        <div class="header">
-          <div class="headerContainer">
-            <div class="navMenu">
-              <a class="aboutBackButton" onClick="linkAnimation(`../src/index.html`)">Back</a>
-            </div>
-            <div class="toggleButton" onClick="toggleLightDark()"></div>
+    <div class="header">
+      <div class="headerContainer">
+        <div class="navMenu">
+          <a class="backButton" onClick="linkAnimation(`../src/index.html`)">Back</a>
+        </div>
+        <div class="toggleButton" onClick="toggleLightDark()"></div>
+      </div>
+    </div>
+    <div class="aboutPageContent">
+      <div class="aboutContainer">
+        <div class="aboutCopy">
+          <div style="opacity: 0" id="siteBio">
+            Alitoura is a black and white study by Matthew William Taylor and Jason Sutherland Hsu.
+          </div>
+          <div class="aboutWrapper" id="photography">
+            <div >Photography</div><span>Jason Sutherland Hsu, Matthew William Taylor</span>
+          </div>
+          <div class="aboutWrapper" id="subjects">
+            <div>Subjects</div><span>Katherine Monogue-Rines, Abby Diedrich, Emily Parker</span>
+          </div>
+          <div class="aboutWrapper" id="website">
+            <div>Website</div><span>Matthew William Taylor, Michael Isabella and Newlywed</span>
+          </div>
+          <div class="aboutWrapper" id="productionAssistant">
+            <div>Production Assistant</div><span>Joshua Meneley</span>
           </div>
         </div>
-        <div class="aboutContainer">
-          <div class="aboutCopy">
-            <div style="opacity: 0" id="siteBio">
-              Alitoura is a black and white study by Matthew William Taylor and Jason Sutherland Hsu.
-            </div>
-            <div class="aboutWrapper" id="photography">
-              <div >Photography</div><span>Jason Sutherland Hsu, Matthew William Taylor</span>
-            </div>
-            <div class="aboutWrapper" id="subjects">
-              <div>Subjects</div><span>Katherine Monogue-Rines, Abby Diedrich, Emily Parker</span>
-            </div>
-            <div class="aboutWrapper" id="website">
-              <div>Website</div><span>Matthew William Taylor, Michael Isabella and Newlywed</span>
-            </div>
-            <div class="aboutWrapper" id="productionAssistant">
-              <div>Production Assistant</div><span>Joshua Meneley</span>
-            </div>
-          </div>
-        </div>
+      </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="../scripts/simple-lightbox.jquery.min.js"></script>
@@ -48,8 +48,6 @@
         el1.classList.toggle("bodyDarkMode");
         const el2 = document.getElementsByClassName('toggleButton')[0];
         el2.classList.toggle("buttonDarkMode");
-        const el6 = document.getElementsByClassName('logoMask')[0];
-        el6.classList.toggle('logoMaskDarkMode');
     }
   </script>
   <script>
