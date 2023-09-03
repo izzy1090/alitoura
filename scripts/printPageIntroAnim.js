@@ -11,12 +11,13 @@ tl1.add({
     delay: 800
 })
 .add({
-    targets: ['.bookContainer'],
+    targets: ['.bookContainer', '.book'],
     opacity: 1, 
-    translateY: [5, 0]
+    translateY: [5, 0],
+    duration: 900
 })
 .add({
-    targets: '.copyContainer',
+    targets: ['.copyContainer'],
     opacity: 1, 
     translateY: [5, 0]
 })      
