@@ -6,5 +6,59 @@
 }
 
 .printContainer {
+
+}
+
+.bookContainer{
+
+}
+
+.book{
+
+}
+
+.copyContainer{
     opacity: 0;
+}
+
+.printDimensions{
+    font-size: 1.2em;
+}
+
+.purchaseButton {
+    border-radius: 2rem;
+    border: 1px solid;
+    padding: 9px;
+    font-size: 1.2em;
+    font-weight: lighter;
+    cursor: pointer;
+    background-color: #F1F1EF;
+    color: #0D0D0E;
+}
+
+.purchaseButton:hover{
+    background-color: #0D0D0E;
+    color: #F1F1EF;
+}
+
+.purchaseButton:active{
+    transform: translateY(1px);
+    background-color: #F1F1EF;
+    color: grey;
+}
+
+.purchaseButtonDarkMode {
+    background-color: #0D0D0E;
+    color: #F1F1EF;
+}
+
+.purchaseButtonDarkMode:hover{
+    background-color: #F1F1EF;
+    color: #0D0D0E;
+}
+
+.purchaseButton:active{
+    transform: translateY(1px);
+    background-color: #0D0D0E;
+    color: grey;
 }

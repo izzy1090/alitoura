@@ -17,7 +17,17 @@
     </div>
     <div class="printPageContent">
         <div class="printContainer">
-            hey
+            <div class="bookContainer">
+                <div class="book">
+
+                </div>
+            </div>
+            <div class="copyContainer">
+                <div class="printDimensions">
+                    A limited edition 5.5" x 8.5" zine designed and printed in California
+                </div>
+                <button class="purchaseButton">Purchase for $9</button>
+            </div>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -30,6 +40,8 @@
         el1.classList.toggle("bodyDarkMode");
         const el2 = document.getElementsByClassName('toggleButton')[0];
         el2.classList.toggle("buttonDarkMode");
+        const el3 = document.getElementsByClassName('purchaseButton')[0];
+        el3.classList.toggle("purchaseButtonDarkMode")
     }
   </script>
   <script>

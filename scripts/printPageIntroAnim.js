@@ -5,13 +5,13 @@ const tl1 = anime.timeline({
 });
 
 tl1.add({
-targets: ['.backButton', '.toggleButton'],
-opacity: 1, 
-translateY: [5,0],
-delay: 800
+    targets: ['.backButton', '.toggleButton'],
+    opacity: 1, 
+    translateY: [5,0],
+    delay: 800
 })
 .add({
-    targets: ['.printContainer'],
+    targets: '.copyContainer',
     opacity: 1, 
     translateY: [5, 0]
 })      
