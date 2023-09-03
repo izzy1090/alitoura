@@ -52,6 +52,7 @@
     cursor: pointer;
     background-color: #F1F1EF;
     color: #0D0D0E;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .purchaseButton:hover{
@@ -62,6 +63,8 @@
 .purchaseButton:active{
     transform: translateY(1px);
     background-color: #F1F1EF;
+    /* adds a transition speed between color states and how long it takes for something to transform */
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
     color: grey;
 }
 
