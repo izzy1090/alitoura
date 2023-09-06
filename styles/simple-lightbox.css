@@ -44,7 +44,7 @@ body.hidden-scroll {
 .sl-wrapper .sl-close {
   display: none;
   position: fixed;
-  top: 10%;
+  bottom: 3%;
   padding-left: 25px;
   /* right: 10%;
   top: 30px; */
