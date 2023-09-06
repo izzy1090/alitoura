@@ -44,7 +44,10 @@ body.hidden-scroll {
 .sl-wrapper .sl-close {
   display: none;
   position: fixed;
-  top: 5%;
+  bottom: 0%;
+  padding-bottom: 15px;
+  padding: 25px;
+  left: 0%;
   padding-left: 25px;
   /* right: 10%;
   top: 30px; */
@@ -55,7 +58,7 @@ body.hidden-scroll {
   margin-right: 80px; */
   height: fit-content;
   width: fit-content;
-  line-height: 44px;
+  /* line-height: 44px; */
   font-family: Arial, Baskerville, monospace;
   color: #000;
   font-size: 20px
