@@ -3,6 +3,10 @@
     src: url(../fonts/helveticaneue.ttf);
 }
 
+*{
+    -webkit-user-drag: none;
+}
+
 body {
     margin: 0;
     padding: 0;
