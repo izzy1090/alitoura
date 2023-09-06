@@ -97,12 +97,14 @@ body {
     z-index: 0;
     padding-right: 100px;
     padding-top: 250px;
+    /* pointer-events: none; */
 }
 
 .carouselContainer .imageWrapper:nth-child(odd) {
     z-index: 0;
     padding-right: 100px;
     padding-bottom: 150px;
+    /* pointer-events: none; */
 }
 
 .carouselContainer .imageWrapper:nth-child(15){
@@ -146,7 +148,7 @@ body {
     }
 
     .carouselContainer img{
-        width: 500px;
+        width: 300px;
         padding-right: 50px;
     }
     .carouselContainer .imageWrapper:nth-child(1){
@@ -167,7 +169,7 @@ body {
     }
 
     .carouselContainer img{
-        width: 500px;
+        width: 300px;
         padding-right: 50px;
     }
     .carouselContainer .imageWrapper:nth-child(1){
@@ -187,7 +189,7 @@ body {
         width: 90%;
     }
     .carouselContainer img{
-        width: 500px;
+        width: 300px;
         padding-right: 50px;
     }
     .carouselContainer .imageWrapper:nth-child(1){
@@ -208,7 +210,7 @@ body {
     }
 
     .carouselContainer img{
-        width: 500px;
+        width: 300px;
         padding-right: 50px;
     }
 
@@ -229,7 +231,7 @@ body {
         width: 90%;
     }
     .carouselContainer img{
-        width: 500px;
+        width: 300px;
         padding-right: 50px;
     }
 
@@ -256,7 +258,7 @@ body {
     }
     
     .carouselContainer img{
-        width: 500px;
+        width: 300px;
         padding-right: 50px;
     }
     .carouselContainer .imageWrapper:nth-child(1){
@@ -277,7 +279,7 @@ body {
     }
 
     .carouselContainer img{
-        width: 500px;
+        width: 400px;
         padding-right: 50px;
     }
     .carouselContainer .imageWrapper:nth-child(1){
