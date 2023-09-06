@@ -182,7 +182,6 @@
         fadeSpeed: 0,
         animationSlide: false,
         closeText: 'return'
-
     });
     // Otherwise set the options for the lightbox to be default
     } else {
@@ -252,37 +251,27 @@
     })
   </script>
   <script>
-    // Get a reference to your button element
-const button = document.querySelector('.your-button-class');
+//  // Select all the images within your carouselContainer
+// const imagesInCarousel = document.querySelectorAll('.carouselContainer img');
 
-// Define a delay in milliseconds (e.g., 1000ms or 1 second)
-const delay = 1000;
+// let debounceTimeout;
 
-let touchStartTimestamp;
+// function handleImageClick(event) {
+//   // Clear the previous timeout to prevent multiple executions
+//   clearTimeout(debounceTimeout);
 
-// Add a touchstart event listener to the button
-button.addEventListener('touchstart', (event) => {
-  // Prevent the default touch behavior (e.g., scroll or tap and hold)
-  event.preventDefault();
-  
-  // Record the timestamp when the touch started
-  touchStartTimestamp = Date.now();
-});
+//   // Set a new timeout
+//   debounceTimeout = setTimeout(function () {
+//     // Your event handling code here
+//     // For example, you can open the lightbox here
+//     openLightbox(event.target.classList.contains('sl-overlay')); // Replace with your function to open the lightbox
+//   }, 10000); // Adjust the delay time as needed
+// }
 
-// Add a touchend event listener to the button
-button.addEventListener('touchend', (event) => {
-  // Calculate the time duration of the touch
-  const touchDuration = Date.now() - touchStartTimestamp;
-  
-  // Check if the touch duration is greater than the delay
-  if (touchDuration >= delay) {
-    // If the touch was held for longer than the delay, consider it as a long tap
-    // You can add your custom behavior here (e.g., open a modal, show a context menu, etc.)
-  } else {
-    // If the touch was short, it's a regular tap, and you can trigger your button's usual behavior
-    button.click(); // You can replace this with your desired action
-  }
-});
+// // Attach the event listener to each image in the carouselContainer
+// imagesInCarousel.forEach(function (image) {
+//   image.addEventListener('click', handleImageClick);
+// });
 
 
   </script>
