@@ -166,19 +166,21 @@
     if (/^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
       $('.carouselContainer a').simpleLightbox({ 
         showCounter: false,
-        close: false,
+        docClose: false,
         scrollZoom: false,
         loop: true,
         fadeSpeed: 0,
-        animationSlide: false
+        animationSlide: false,
+
     });
     // Otherwise set the options for the lightbox to be default
     } else {
       $('.carouselContainer a').simpleLightbox({ 
         showCounter: false,
-        close: false,
+        docClose: false,
         scrollZoom: false,
         loop: true,
+        closeText: 'return'
       });
     }
   </script>
@@ -237,5 +239,17 @@
       invertedSvgObject.style.height = '100%';
       invertedSvgContainer.appendChild(invertedSvgObject)
     })
+  </script>
+  <script>
+    // document.body.addEventListener('DOMNodeInserted', function(event) {
+    //   if (event.target.classList.contains('sl-overlay')) {
+    //     const divs = document.querySelectorAll('.carouselContainer')
+    //     divs.forEach(function(div){
+    //       console.log('hey')
+    //       div.style.pointerEvents = 'none'
+    //     })
+    //   } 
+    // });
+
   </script>
 </html>
