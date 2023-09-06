@@ -71,7 +71,7 @@ body {
     display: inline-block;
     opacity: 0;
     width: 700px;
-    padding: 50px;
+    padding: 40px;
 } 
 
 /* Float */
@@ -149,7 +149,7 @@ body {
 
     .carouselContainer img{
         width: 500px;
-        padding-right: 50px;
+        padding: 10px;
     }
     .carouselContainer .imageWrapper:nth-child(1){
         padding-top: 70px;
@@ -188,7 +188,7 @@ body {
 
     .carouselContainer img{
         width: 500px;
-        padding-right: 50px;
+        padding: 10px;
     }
     .carouselContainer .imageWrapper:nth-child(1){
         padding-top: 70px;
@@ -226,7 +226,7 @@ body {
     }
     .carouselContainer img{
         width: 500px;
-        padding-right: 50px;
+        padding: 10px;
     }
     .carouselContainer .imageWrapper:nth-child(1){
         padding-top: 70px;
@@ -265,7 +265,7 @@ body {
 
     .carouselContainer img{
         width: 500px;
-        padding-right: 50px;
+        padding: 10px;
     }
     .carouselContainer .imageWrapper:nth-child(1){
         padding-top: 70px;
@@ -303,7 +303,7 @@ body {
     }
     .carouselContainer img{
         width: 500px;
-        padding-right: 50px;
+        padding: 10px;
     }
     .carouselContainer .imageWrapper:nth-child(1){
         padding-top: 70px;
@@ -343,7 +343,7 @@ body {
     
     .carouselContainer img{
         width: 500px;
-        padding-right: 50px;
+        padding: 10px;
     }
     .carouselContainer .imageWrapper:nth-child(1){
         padding-top: 70px;
@@ -383,7 +383,7 @@ body {
 
     .carouselContainer img{
         width: 500px;
-        padding-right: 50px;
+        padding: 10px;
     }
     .carouselContainer .imageWrapper:nth-child(1){
         padding-top: 70px;
