@@ -45,10 +45,10 @@ body.hidden-scroll {
   display: none;
   position: fixed;
   bottom: 0%;
-  padding-bottom: 10px;
+  padding: 25px;
   /* padding: 25px; */
   left: 0%;
-  padding-left: 25px;
+  /* padding-left: 25px; */
   z-index: 10060;
   height: fit-content;
   width: fit-content;
