@@ -57,7 +57,7 @@ body {
 
 .carouselContainer {
     margin-top: 20px;
-    height: 100vh;
+    height: 80vh;
     display: flex; 
     flex-direction: row;
     align-items: center;
@@ -70,7 +70,7 @@ body {
 .carouselContainer img {
     display: inline-block;
     opacity: 0;
-    width: 700px;
+    width: 600px;
     padding: 50px;
 } 
 
@@ -96,13 +96,13 @@ body {
 .carouselContainer .imageWrapper:nth-child(even) {
     z-index: 0;
     padding-right: 100px;
-    padding-top: 350px;
+    padding-top: 250px;
 }
 
 .carouselContainer .imageWrapper:nth-child(odd) {
     z-index: 0;
     padding-right: 100px;
-    padding-bottom: 350px;
+    padding-bottom: 150px;
 }
 
 .carouselContainer .imageWrapper:nth-child(15){
