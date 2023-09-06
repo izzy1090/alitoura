@@ -45,8 +45,8 @@ body.hidden-scroll {
   display: none;
   position: fixed;
   bottom: 0%;
-  padding-bottom: 15px;
-  padding: 25px;
+  padding-bottom: 10px;
+  /* padding: 25px; */
   left: 0%;
   padding-left: 25px;
   z-index: 10060;
@@ -54,7 +54,8 @@ body.hidden-scroll {
   width: fit-content;
   font-family: Arial, Baskerville, monospace;
   color: #000;
-  font-size: 20px
+  font-size: 20px;
+  /* pointer-events: none; */
 }
 .sl-wrapper .sl-counter {
   display: none;
