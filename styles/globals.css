@@ -156,6 +156,10 @@ body {
         margin-left: -100px;
     }
 
+    .carouselContainer .imageWrapper:nth-child(even){
+        padding-bottom: 150px;
+    }
+
     .carouselContainer .imageWrapper:nth-child(22){
         padding-top: 100px;
         padding-right: 0px;
@@ -175,6 +179,10 @@ body {
     .carouselContainer .imageWrapper:nth-child(1){
         padding-top: 150px;
         margin-left: -100px;
+    }
+
+    .carouselContainer .imageWrapper:nth-child(even){
+        padding-bottom: 150px;
     }
 
     .carouselContainer .imageWrapper:nth-child(22){
@@ -197,6 +205,10 @@ body {
         margin-left: -100px;
     }
 
+    .carouselContainer .imageWrapper:nth-child(even){
+        padding-bottom: 150px;
+    }
+
     .carouselContainer .imageWrapper:nth-child(22){
         padding-top: 100px;
         padding-right: 0px;
@@ -217,6 +229,10 @@ body {
     .carouselContainer .imageWrapper:nth-child(1){
         padding-top: 150px;
         margin-left: -100px;
+    }
+
+    .carouselContainer .imageWrapper:nth-child(even){
+        padding-bottom: 150px;
     }
 
     .carouselContainer .imageWrapper:nth-child(22){
@@ -262,8 +278,12 @@ body {
         padding-right: 50px;
     }
     .carouselContainer .imageWrapper:nth-child(1){
-        padding-top: 150px;
-        margin-left: -100px;
+        padding-top: 200px;
+        margin-left: -70px;
+    }
+
+    .carouselContainer .imageWrapper:nth-child(even){
+        padding-bottom: 150px;
     }
 
     .carouselContainer .imageWrapper:nth-child(22){
@@ -285,6 +305,10 @@ body {
     .carouselContainer .imageWrapper:nth-child(1){
         padding-top: 150px;
         margin-left: -100px;
+    }
+
+    .carouselContainer .imageWrapper:nth-child(even){
+        padding-bottom: 150px;
     }
 
     .carouselContainer .imageWrapper:nth-child(22){
