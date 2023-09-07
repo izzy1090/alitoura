@@ -99,18 +99,85 @@ body {
     padding-top: 250px;
 }
 
+#largeVerticals img{
+    width: 500px;
+}
+
 .carouselContainer .imageWrapper:nth-child(2) {
     z-index: 0;
     padding-right: 100px;
-    padding-bottom: 200px;
-    padding-top: 5px;
+    padding-bottom: 350px;
+    /* padding-top: 5px; */
+}
+
+.carouselContainer .imageWrapper:nth-child(3) {
+    z-index: 0;
+    padding-right: 100px;
+    padding-bottom: 350px;
+    /* padding-top: 5px; */
+}
+
+.carouselContainer .imageWrapper:nth-child(4){
+    z-index: 0;
+    padding-right: 100px;
+    padding-bottom: 350px;
+    /* padding-top: 5px; */
+}
+
+.carouselContainer .imageWrapper:nth-child(5){
+    z-index: 0;
+    padding-right: 100px;
+    padding-bottom: 350px!important;
+    /* padding-top: 5px; */
 }
 
 .carouselContainer .imageWrapper:nth-child(6) {
     z-index: 0;
     padding-right: 100px;
-    padding-bottom: 200px;
+    padding-bottom: 300px;
     padding-top: 5px;
+}
+
+.carouselContainer .imageWrapper:nth-child(8) {
+    z-index: 0;
+    padding-right: 100px;
+    padding-bottom: 130px;
+}
+
+.carouselContainer .imageWrapper:nth-child(10) {
+    z-index: 0;
+    padding-right: 100px;
+    padding-bottom: 130px;
+}
+
+.carouselContainer .imageWrapper:nth-child(12) {
+    z-index: 0;
+    padding-right: 100px;
+    padding-bottom: 130px;
+}
+
+.carouselContainer .imageWrapper:nth-child(14) {
+    z-index: 0;
+    padding-right: 100px;
+    padding-bottom: 160px;
+}
+
+.carouselContainer .imageWrapper:nth-child(15){
+    z-index: 0;
+    padding-right: 100px;
+    padding-bottom: 400px!important;
+}
+
+.carouselContainer .imageWrapper:nth-child(16){
+    z-index: 0;
+    padding-right: 100px;
+    padding-bottom: 460px;
+}
+
+.carouselContainer .imageWrapper:nth-child(17){
+    z-index: 0;
+    padding-right: 100px;
+    padding-bottom: 5px!important;
 }
 
 .carouselContainer .imageWrapper:nth-child(18) {
@@ -125,6 +192,13 @@ body {
     padding-right: 100px;
     padding-bottom: 200px;
     padding-top: 5px;
+}
+
+.carouselContainer .imageWrapper:nth-child(22) {
+    z-index: 0;
+    padding-right: 100px;
+    padding-bottom: 100px;
+    padding-top: 0px;
 }
 
 .carouselContainer .imageWrapper:nth-child(24) {
@@ -193,74 +267,6 @@ body {
         width: 40%;
     }
 }
-
-/* @media (min-width: 769px) and (max-width: 1024px){
-    .sl-close{
-        text-indent: -9999px!important;
-        line-height: 0;
-        pointer-events: none !important;
-    }
-
-    .sl-close::after{
-        content: 'Drag down to close'!important;
-        font-size: 16px;
-        text-indent: 0;
-        display: block;
-        line-height: initial;
-        pointer-events:  none !important;
-    }
-}
-
-@media (max-width: 768px){
-    .sl-close{
-        text-indent: -9999px!important;
-        line-height: 0;
-        pointer-events: none !important;
-    }
-
-    .sl-close::after{
-        content: 'Drag down to close'!important;
-        font-size: 16px;
-        text-indent: 0;
-        display: block;
-        line-height: initial;
-        pointer-events:  none !important;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1024px){
-    .sl-close{
-        text-indent: -9999px!important;
-        line-height: 0;
-        pointer-events: none !important;
-    }
-
-    .sl-close::after{
-        content: 'Drag down to close';
-        font-size: 16px;
-        text-indent: 0;
-        display: block;
-        line-height: initial;
-        pointer-events:  none !important;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px){
-    .sl-close{
-        text-indent: -9999px!important;
-        line-height: 0;
-        pointer-events: none !important;
-    }
-
-    .sl-close::after{
-        content: 'Drag down to close';
-        font-size: 16px;
-        text-indent: 0;
-        display: block;
-        line-height: initial;
-        pointer-events:  none !important;
-    }
-} */
 
 /* Smallest screens possible */
 @media (min-width: 200px) and (max-width: 299px) and (min-height: 500px) and (max-height: 653px){
