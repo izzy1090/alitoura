@@ -13,6 +13,7 @@
   </head>
   <body>
     <div class="pageContent">
+      <div data-scroll-container>
         <div class="header">
             <div class="headerContainer">
                 <div class="navMenu">
@@ -27,7 +28,7 @@
             <div class="logo" id="normalSvgContainer"></div>
             <div class="logo logoDarkMode" id="invertedSvgContainer"></div>
         </div>
-      <div data-scroll-container>
+      
         <div data-scroll-section>
           <div class="carouselContainer">
             <figure class="imageWrapper">
@@ -180,7 +181,7 @@
     if (/^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
       const logoContainer = document.querySelector('.logoContainer')
 
-      logoContainer.style.setProperty('pointer-events', 'auto', 'important');
+      // logoContainer.style.setProperty('pointer-events', 'auto', 'important');
 
       $('.carouselContainer a').simpleLightbox({ 
         showCounter: false,
@@ -246,6 +247,7 @@
       // Set the width and height to 100%
       normalSvgObject.style.width = '100%'; // Adjust the size as needed
       normalSvgObject.style.height = '100%';
+      normalSvgContainer.style.pointerEvents = 'none';
       // Then append the initialized object to the empty SVG container created earlier
       normalSvgContainer.appendChild(normalSvgObject);
       
@@ -256,6 +258,7 @@
       invertedSvgObject.type = 'image/svg+xml';
       invertedSvgObject.style.width = '100%'; // Adjust the size as needed
       invertedSvgObject.style.height = '100%';
+      invertedSvgContainer.style.pointerEvents = 'none';
       invertedSvgContainer.appendChild(invertedSvgObject)
     })
   </script>
