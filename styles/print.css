@@ -85,7 +85,6 @@
 
     .bookContainer {
         padding: 25px;
-        
     }
 
     .bookContainer img{
@@ -237,7 +236,6 @@
 
     .bookContainer {
         padding: 25px;
-        
     }
 
     .bookContainer img{
@@ -274,18 +272,18 @@
     }
 
     .bookContainer {
-        padding: 25px;
+        padding: 20px;
         
     }
 
     .bookContainer img{
-        width: 100%;
+        width: 90%;
     }
 
     .copyContainer{
         font-size: .89em;
-        padding-left: 25px;
-        padding-right: 25px;
+        padding-left: 35px;
+        padding-right: 35px;
     }
 
     .purchaseButton {
