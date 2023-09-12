@@ -11,7 +11,7 @@ tl1.add({
     delay: 800
 })
 .add({
-    targets: ['.bookContainer', '.book'],
+    targets: ['.bookContainer'],
     opacity: 1, 
     translateY: [5, 0],
     duration: 900
