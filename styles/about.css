@@ -12,13 +12,13 @@
     font-size: 1.25em;
 }
 
-#photography a, #website a {
+#photography a {
     text-decoration: none;
     color: inherit;
     white-space: nowrap;
 }
 
-#photography a:after, #website a:after{
+#photography a:after {
     content: '';
     display: block;
     width: 0%;
@@ -29,7 +29,11 @@
     left: 0;
 }
 
-.bodyDarkMode #photography a:after, #website a:after{
+#photography a:hover::after {
+    width: 100%;
+}
+
+.bodyDarkMode #photography a:after {
     content: '';
     display: block;
     width: 0%;
@@ -38,10 +42,6 @@
     transition: width 0.2s ease-in-out;
     bottom: -3px;
     left: 0;
-}
-
-#photography a:hover::after, #website a:hover::after {
-    width: 100%;
 }
 
 .aboutWrapper {
