@@ -147,8 +147,7 @@
 @media (min-width: 376px) and (max-width: 414px) and (min-height: 668px) and (max-height: 895px){
     .navMenu{
         font-size: 1.1em;
-        -webkit-font-size: 1.1em;
-        -moz-font-size: 1.1em;
+        -webkit-text-size-adjust: 100%;
     }
     .toggleButton{
         height: 18px;
