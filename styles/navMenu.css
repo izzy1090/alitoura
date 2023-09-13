@@ -67,6 +67,9 @@
     justify-content: flex-start;
     align-items: center;
     font-size: 1.25em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
 }
 
 .toggleButton {
