@@ -72,6 +72,16 @@ body {
     padding: 40px;
 } 
 
+.animate-on-scroll {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.animate-on-scroll.animate {
+    opacity: 1;
+/* Additional animation properties can be added here */
+}
+
 /* Float */
 .hvr-float {
   display: inline-block;
