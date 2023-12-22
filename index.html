@@ -283,8 +283,6 @@
       invertedSvgContainer.style.pointerEvents = 'none';
       invertedSvgContainer.appendChild(invertedSvgObject);
 
-      // document.getElementById('initialImages').style.opacity = '0'; // Set initial opacity to 0
-
     })
   </script>
   <script>
@@ -299,7 +297,6 @@
 
     const imagesToObserve = document.querySelectorAll(".carouselContainer img");
     imagesToObserve.forEach((image) => {
-      // image.getElementById('initialImages').style.opacity = "1"
       observer.observe(image);
     });
   </script>
