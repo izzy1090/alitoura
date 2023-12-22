@@ -1,9 +1,10 @@
 function fadePicsAndGrowLogo(){
     anime({
-        targets: '.carouselContainer img', 
+        targets: document.getElementById('initialImages'), 
         opacity: 1,
-        duration: 800,
-        easing: 'easeInOutQuad'
+        duration: 500,
+        easing: 'easeInOutQuad',
+        
     });
 
     anime({
@@ -22,11 +23,16 @@ function fadePicsAndGrowLogo(){
         translateY: [0, '100%'],
         duration: 1000,
         easing: 'easeInOutQuad',
+        begin: function() {
+          document.getElementById('initialImages').style.opacity = '0'; // Set initial opacity to 0
+        },
         // Then complete the animation by removing the logo mask from the DOM
         complete: () => {
           logoMask.parentElement.removeChild(logoMask);
+
         }
       })
+      
     }
   window.addEventListener('load', function(){
     // Logo animation timeline
