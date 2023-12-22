@@ -4,7 +4,6 @@ function fadePicsAndGrowLogo(){
         opacity: 1,
         duration: 500,
         easing: 'easeInOutQuad',
-        
     });
 
     anime({
