@@ -4,6 +4,9 @@ function fadePicsAndGrowLogo(){
         opacity: 1,
         duration: 500,
         easing: 'easeInOutQuad',
+        begin: function() {
+          document.getElementById('initialImages').style.opacity = '0'; // Set initial opacity to 0
+        },
     });
 
     anime({
