@@ -47,24 +47,24 @@
         <div data-scroll-container>
         <div data-scroll-section>
           <div class="carouselContainer">
-            <figure class="imageWrapper">
+            <figure class="imageWrapper" >
               <a href="../images/1.jpg" class="hvr-float">
-                <img src="../images/1.jpg" data-scroll data-scroll-speed="1" id="initialImages" loading="eager">
+                <img src="../images/1.jpg" data-scroll data-scroll-speed="1" id="initialImages">
               </a>
             </figure>
             <figure class="imageWrapper">
               <a href="../images/2.jpg" class="hvr-float" id="largeVerticals">
-                <img src="../images/2.jpg" data-scroll data-scroll-speed="4" id="initialImages" loading="eager">
+                <img src="../images/2.jpg" data-scroll data-scroll-speed="4" id="initialImages">
               </a>
             </figure>
             <figure class="imageWrapper">
               <a href="../images/3.jpg" class="hvr-float" id="largeVerticals">
-                <img src="../images/3.jpg" data-scroll data-scroll-speed="9" id="initialImages" loading="eager">
+                <img src="../images/3.jpg" data-scroll data-scroll-speed="9" id="initialImages">
               </a>
             </figure>
             <figure class="imageWrapper">
               <a href="../images/4.jpg" class="hvr-float">
-                <img src="../images/4.jpg" data-scroll data-scroll-speed="5" id="initialImages" loading="eager">
+                <img src="../images/4.jpg" data-scroll data-scroll-speed="5" id="initialImages">
               </a>
             </figure>
             <figure class="imageWrapper">
@@ -281,7 +281,10 @@
       invertedSvgObject.style.width = '100%'; // Adjust the size as needed
       invertedSvgObject.style.height = '100%';
       invertedSvgContainer.style.pointerEvents = 'none';
-      invertedSvgContainer.appendChild(invertedSvgObject)
+      invertedSvgContainer.appendChild(invertedSvgObject);
+
+      // document.getElementById('initialImages').style.opacity = '0'; // Set initial opacity to 0
+
     })
   </script>
   <script>
@@ -296,6 +299,7 @@
 
     const imagesToObserve = document.querySelectorAll(".carouselContainer img");
     imagesToObserve.forEach((image) => {
+      // image.getElementById('initialImages').style.opacity = "1"
       observer.observe(image);
     });
   </script>

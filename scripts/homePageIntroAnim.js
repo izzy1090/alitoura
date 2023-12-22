@@ -1,11 +1,14 @@
+const initialImage = document.getElementById('initialImages')
+const largeVerticals = document.getElementById('largeVerticals')
 function fadePicsAndGrowLogo(){
     anime({
-        targets: document.getElementById('initialImages'), 
+        targets: [initialImage, largeVerticals],
         opacity: 1,
         duration: 500,
         easing: 'easeInOutQuad',
         begin: function() {
-          document.getElementById('initialImages').style.opacity = '0'; // Set initial opacity to 0
+          initialImage.style.opacity = '0'; // Set initial opacity to 0
+          largeVerticals.style.opacity = '0';
         },
     });
 
@@ -26,7 +29,8 @@ function fadePicsAndGrowLogo(){
         duration: 1000,
         easing: 'easeInOutQuad',
         begin: function() {
-          document.getElementById('initialImages').style.opacity = '0'; // Set initial opacity to 0
+          initialImage.style.opacity = '0'; // Set initial opacity to 0
+          largeVerticals.style.opacity = '0';
         },
         // Then complete the animation by removing the logo mask from the DOM
         complete: () => {
