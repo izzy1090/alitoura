@@ -1,7 +1,9 @@
 
 const initialImage = document.getElementById('initialImages')
 const largeVerticals = document.getElementById('largeVerticals')
-function fadePicsAndGrowLogo(){
+
+window.addEventListener('load', function(){
+  function fadePicsAndGrowLogo(){
     anime({
         targets: [initialImage, largeVerticals],
         opacity: 1,
@@ -25,9 +27,6 @@ function fadePicsAndGrowLogo(){
         translateY: [0, '100%'],
         duration: 1000,
         easing: 'easeInOutQuad',
-        begin: function() {
-          
-        },
         // Then complete the animation by removing the logo mask from the DOM
         complete: () => {
           logoMask.parentElement.removeChild(logoMask);
@@ -36,7 +35,6 @@ function fadePicsAndGrowLogo(){
       })
       
     }
-  window.addEventListener('load', function(){
     // Logo animation timeline
     const tl1 = anime.timeline({
       easing: 'easeOutExpo',
