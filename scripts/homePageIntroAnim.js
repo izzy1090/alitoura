@@ -1,41 +1,35 @@
 
 const initialImage = document.getElementById('initialImages')
 const largeVerticals = document.getElementById('largeVerticals')
-function fadePicsAndGrowLogo(){
-    anime({
-        targets: [initialImage, largeVerticals],
-        opacity: 1,
-        duration: 500,
-        easing: 'easeInOutQuad',
-    });
-
+function growLogo(){
     anime({
         targets: '.logo',
         scale: 1.02,
         duration: 1200,
         easing: 'easeInOutQuad'
     });
-  }
-  function logoAnimation(){
-      const logoMask = document.querySelector('.logoMask');
+}
 
-      anime({
-        // Target the logo mask before moving the mask down to create a swipe in effect
-        targets: logoMask,
-        translateY: [0, '100%'],
-        duration: 1000,
-        easing: 'easeInOutQuad',
-        begin: function() {
-          
-        },
-        // Then complete the animation by removing the logo mask from the DOM
-        complete: () => {
-          logoMask.parentElement.removeChild(logoMask);
+function logoAnimation(){
+  const logoMask = document.querySelector('.logoMask');
 
-        }
-      })
+  anime({
+    // Target the logo mask before moving the mask down to create a swipe in effect
+    targets: logoMask,
+    translateY: [0, '100%'],
+    duration: 1000,
+    easing: 'easeInOutQuad',
+    begin: function() {
       
+    },
+    // Then complete the animation by removing the logo mask from the DOM
+    complete: () => {
+      logoMask.parentElement.removeChild(logoMask);
+
     }
+  })
+    
+}
   window.addEventListener('load', function(){
     // Logo animation timeline
     const tl1 = anime.timeline({
@@ -52,7 +46,7 @@ function fadePicsAndGrowLogo(){
     })      
     .add({
         complete: ()=> {
-          fadePicsAndGrowLogo;
+          growLogo();
           initialImage.style.opacity = '1'; 
           largeVerticals.style.transition = 'opacity 1s'; 
           largeVerticals.style.opacity = '1'; 
