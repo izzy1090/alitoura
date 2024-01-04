@@ -175,7 +175,7 @@
     <script src="../scripts/simple-lightbox.jquery.min.js"></script>
     <script src="../scripts/anime.min.js"></script>
     <script src="../scripts/locomotive-scroll.min.js"></script>
-    <script src="../scripts/homePageIntroAnim.js" async></script>
+    <script src="../scripts/homePageIntroAnim.js"></script>
   </body>
   <script>
     var scroll = new LocomotiveScroll({
@@ -285,7 +285,7 @@
 
     })
   </script>
-  <script>
+  <script defer>
     const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
