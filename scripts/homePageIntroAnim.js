@@ -6,6 +6,13 @@ window.addEventListener('load', function(){
   function growLogo()
   {
     anime({
+      targets: '.carouselContainer img',
+      opacity: 1,
+      duration: 500,
+      easing: "easeInOutQuad",
+    })
+
+    anime({
         targets: '.logo',
         scale: 1.02,
         duration: 1200,
@@ -42,17 +49,17 @@ window.addEventListener('load', function(){
   tl1
   .add({
     begin: () => {
-      initialImage.style.opacity = '0'; // Set initial opacity to 0
-      largeVerticals.style.opacity = '0';
+      // initialImage.style.opacity = '0'; // Set initial opacity to 0
+      // largeVerticals.style.opacity = '0';
       logoAnimation();
     }
   })      
   .add({
       complete: ()=> {
         growLogo();
-        initialImage.style.opacity = '1'; 
-        largeVerticals.style.transition = 'opacity 1s'; 
-        largeVerticals.style.opacity = '1'; 
+        // initialImage.style.opacity = '1'; 
+        // largeVerticals.style.transition = 'opacity 1s'; 
+        // largeVerticals.style.opacity = '1'; 
     }
   })
 
