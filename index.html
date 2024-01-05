@@ -286,6 +286,9 @@
     })
   </script>
   <script>
+    setTimeout(()=>{
+
+    
     const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -299,5 +302,6 @@
     imagesToObserve.forEach((image) => {
       observer.observe(image);
     });
+    }, 1500)
   </script>
 </html>
