@@ -3,10 +3,10 @@ window.addEventListener('load', function(){
   const initialImage = document.getElementById('initialImages');
   const largeVerticals = document.getElementById('largeVerticals');
 
-  function growLogo()
+  function growLogoAndFadeImages()
   {
     anime({
-      targets: '.carouselContainer img',
+      targets: '#initialImages',
       opacity: 1,
       duration: 500,
       easing: "easeInOutQuad",
@@ -30,13 +30,9 @@ window.addEventListener('load', function(){
       translateY: [0, '100%'],
       duration: 1000,
       easing: 'easeInOutQuad',
-      begin: function() {
-        
-      },
       // Then complete the animation by removing the logo mask from the DOM
       complete: () => {
         logoMask.parentElement.removeChild(logoMask);
-
       }
     })    
   }
@@ -49,17 +45,12 @@ window.addEventListener('load', function(){
   tl1
   .add({
     begin: () => {
-      // initialImage.style.opacity = '0'; // Set initial opacity to 0
-      // largeVerticals.style.opacity = '0';
       logoAnimation();
     }
   })      
   .add({
       complete: ()=> {
-        growLogo();
-        // initialImage.style.opacity = '1'; 
-        // largeVerticals.style.transition = 'opacity 1s'; 
-        // largeVerticals.style.opacity = '1'; 
+        growLogoAndFadeImages();
     }
   })
 
